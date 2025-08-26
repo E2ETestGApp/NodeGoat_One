@@ -11,10 +11,8 @@ jobs:
     steps:  # List of steps to execute in this job
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4  # Use the checkout action to clone the repo
-
       - name: Black Duck SCA Full Scan  # Step for running a full Black Duck scan
         id: black-duck-full-scan  # Unique ID for this step
-        if: ${{ github.event_name != 'pull_request' }}  # Run this step only if the event is not a PR
         uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}  # Set project name based on repo name
@@ -26,22 +24,15 @@ jobs:
           blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
 
           #Fix PR Config
-          blackducksca_fixpr_enabled: true
-          blackducksca_fixpr_maxCount: 1
-          blackducksca_fixpr_filter_severities: 'CRITICAL,HIGH'
-          blackducksca_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
-          github_token: ${{ secrets.BD_GITHUB_TOKEN }}  # GitHub token for authentication when posting comment
-          #mark_build_status: 'success' # Mark build status as failure if issues are found
-    
-      - name: Black Duck SCA PR Scan  # Step for running a scan on pull requests
-        id: black-duck-pr-scan  # Unique ID for this step
-        if: ${{ github.event_name == 'pull_request' }}  # Run this step only for pull request events
-        uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
-        env:
-          DETECT_PROJECT_NAME: ${{ github.event.repository.name }}  # Set project name based on repo name
-        with:
-          blackducksca_url: ${{ vars.BLACKDUCK_URL }}  # Black Duck server URL from environment variables
-          blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}  # Black Duck API token from secrets
-          blackducksca_scan_full: false  # Do not perform a full scan for PR comments
+          # blackducksca_fixpr_enabled: true
+          # blackducksca_fixpr_maxCount: 1
+          # blackducksca_fixpr_filter_severities: 'CRITICAL,HIGH'
+          # blackducksca_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
+          # github_token: ${{ secrets.BD_GITHUB_TOKEN }}  # GitHub token for authentication when posting comment
+
           blackducksca_prComment_enabled: true  # Enable automatic PR comments based on scan results
           github_token: ${{ secrets.BD_GITHUB_TOKEN }}  # GitHub token for authentication when posting comments
+          #mark_build_status: 'success' # Mark build status as failure if issues are found
+    
+    
+          
