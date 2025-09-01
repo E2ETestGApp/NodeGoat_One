@@ -4,7 +4,7 @@ on:
     branches: [main, master, develop, stage, release]  # Specify branches to trigger on push
   pull_request:  # Trigger the workflow on pull request events
     branches: [main, master, develop, stage, release]  # Specify branches to trigger on PR
-
+  workflow_dispatch:
 jobs:
   build:  # Define a job named 'build'
     runs-on: [sh_mac_mdn]  # Specify the runner to execute the job
