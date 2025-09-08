@@ -19,8 +19,10 @@ jobs:
         #uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
         uses: blackduck-inc/black-duck-security-scan@v2.4.0
         with:
-          polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
-          polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+          #polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
+          #polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+          polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
+          polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
           polaris_application_name: "Node_Goat_Repo_01_Test_Sep09"
           polaris_project_name: "Node_Goat_Repo_01_Test_Sep09"
           # polaris_application_name: "Node_Goat_Repo_Test_Dir_Aug20"
@@ -66,7 +68,7 @@ jobs:
                 ### Mark build status if policy violating issues are found
 
         # Rapid Scans
-          polaris_test_sast_Type: 'SAST_RAPID'   
+          #polaris_test_sast_Type: 'SAST_RAPID'   
           #polaris_test_sast_Type: 'SAST_FULL'      
           mark_build_status: 'success'
 
