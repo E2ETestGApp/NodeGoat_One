@@ -16,12 +16,13 @@ jobs:
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Polaris Full Scan  # Step for running a full CNC Scan
-        uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
+        #uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
+        uses: blackduck-inc/black-duck-security-scan@v2.4.0
         with:
           polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
-          polaris_application_name: "Node_Goat_Repo_03_Test_Aug22_Debug"
-          polaris_project_name: "Node_Goat_Repo_03_Test_Aug22_Debug"
+          polaris_application_name: "Node_Goat_Repo_01_Test_Sep09"
+          polaris_project_name: "Node_Goat_Repo_01_Test_Sep09"
           # polaris_application_name: "Node_Goat_Repo_Test_Dir_Aug20"
           # polaris_project_name: "Node_Goat_Repo_Test_Dir_Aug20"
           #polaris_application_name: "Node_Goat_Repo_Test_Archive_Aug20"
@@ -43,7 +44,7 @@ jobs:
 
         ### Uncomment below configuration for source code upload 
           #polaris_assessment_mode: "SOURCE_UPLOAD"
-          polaris_assessment_mode: "CI"
+          #polaris_assessment_mode: "CI"
           #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e"
           #project_source_excludes: "artifacts,config,test,*.md,*.yml" # Accepts Multiple Values
           #project_source_archive: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e.zip"
