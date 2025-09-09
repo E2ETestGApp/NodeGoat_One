@@ -33,7 +33,6 @@ jobs:
           #polaris_assessment_types: "SCA"
           #polaris_assessment_types: "SAST"
           
-          
            ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
           include_diagnostics: true
 
