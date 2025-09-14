@@ -1,0 +1,64 @@
+name: BlackDuck-CI-Polaris-Linux
+on:
+  push:
+    branches: [main, master, develop, stage, release]
+  pull_request:
+    branches: [main, master, develop, stage, release]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [sh_mac_mdn]  # Your Mac self-hosted runner
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Container
+        run: |
+          # Create cache directory if it doesn't exist
+          mkdir -p ~/polaris-docker/cache
+          chmod 777 ~/polaris-docker/cache
+
+          # Run interactive container
+          docker run -d --name polaris-linux-container \
+            -v ${{ github.workspace }}:/github/workspace \
+            -v ~/polaris-docker/cache:/opt/polaris \
+            python:3.9-slim
+
+          # Install necessary packages in the container
+          docker exec -i polaris-linux-container bash -c '
+            apt-get update && apt-get install -y curl unzip
+            mkdir -p /opt/bridge
+          '
+
+      - name: Run Polaris Scan in Linux Container
+        run: |
+          # Download Bridge CLI inside the container
+          docker exec -i polaris-linux-container bash -c '
+            curl -sSL https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc1/bridge-cli-bundle-linux64.zip > /opt/bridge/bridge-cli.zip
+            unzip -q -o /opt/bridge/bridge-cli.zip -d /opt/bridge
+
+            # Run Polaris scan
+            /opt/bridge/bridge polaris \
+              --polaris.url="${{ secrets.POLARIS_SERVER_URL }}" \
+              --polaris.token="${{ secrets.POLARIS_ACCESS_TOKEN }}" \
+              --polaris.application.name="Node_Goat_e2e" \
+              --polaris.project.name="Node_Goat_e2e" \
+              --polaris.assessment.types="SAST" \
+              --polaris.test.sast.location=hybrid \
+              --include.diagnostics=true \
+              --polaris.reports.sarif.create=true \
+              --polaris.prComment.enabled=true \
+              --github.token="${{ secrets.BD_GITHUB_TOKEN }}"
+          '
+
+      - name: Enter Interactive Mode
+        run: |
+          echo "Entering interactive mode. Type 'exit' when done."
+          docker exec -it polaris-linux-container bash
+
+      - name: Cleanup
+        if: always()
+        run: |
+          docker stop polaris-linux-container || true
+          docker rm polaris-linux-container || true
