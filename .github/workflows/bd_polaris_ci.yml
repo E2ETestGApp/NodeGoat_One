@@ -19,15 +19,14 @@ jobs:
         #uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
         uses: blackduck-inc/black-duck-security-scan@v2.4.0
         with:
-          #polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
-          #polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+          polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
+          #olaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
           #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
 
-          polaris_server_url: ${{ secrets.POLARIS_STAGE_SERVER_URL }}
-          polaris_access_token: ${{ secrets.POLARIS_STAGE_ACCESS_TOKEN }}
-          polaris_application_name: "Node_Goat_Repo_Scan1_Test_Sep10"
-          polaris_project_name: "Node_Goat_Repo_Scan1_Test_Sep10"
+        
+          polaris_application_name: "Node_Goat_e2e"
+          polaris_project_name: "Node_Goat_e2e"
           # polaris_application_name: "Node_Goat_Repo_Test_Dir_Aug20"
           # polaris_project_name: "Node_Goat_Repo_Test_Dir_Aug20"
           #polaris_application_name: "Node_Goat_Repo_Test_Archive_Aug20"
@@ -56,11 +55,11 @@ jobs:
 
       
         ### SARIF report generation and upload to GitHub Adavanced Security Tab: Uncomment below to enable
-        #   polaris_reports_sarif_create: true  
-        #   polaris_reports_sarif_groupSCAIssues: true
+          polaris_reports_sarif_create: true  
+          polaris_reports_sarif_groupSCAIssues: true
         #   polaris_reports_sarif_issue_types: 'SCA,SAST'
         #   polaris_reports_sarif_file_path: '/Users/madhavanr/GitHubTest_E2E/sarif_Path/Polris_Sarif_Reports.json' # File path (including file name) where SARIF report is created.
-        # # polaris_reports_sarif_severities: "CRITICAL,HIGH"
+          polaris_reports_sarif_severities: "CRITICAL,HIGH"
         # polaris_upload_sarif_report: true 
         # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when polaris_upload_sarif_report is set as true
 
