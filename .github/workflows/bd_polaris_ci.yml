@@ -63,7 +63,7 @@ jobs:
       
         ### SARIF report generation and upload to GitHub Adavanced Security Tab: Uncomment below to enable
           polaris_reports_sarif_create: true  
-          polaris_reports_sarif_groupSCAIssues: true
+          #polaris_reports_sarif_groupSCAIssues: true
         #   polaris_reports_sarif_issue_types: 'SCA,SAST'
         #   polaris_reports_sarif_file_path: '/Users/madhavanr/GitHubTest_E2E/sarif_Path/Polris_Sarif_Reports.json' # File path (including file name) where SARIF report is created.
         # polaris_reports_sarif_severities: "CRITICAL,HIGH"
