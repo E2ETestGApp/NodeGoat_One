@@ -19,26 +19,40 @@ jobs:
           mkdir -p ~/polaris-docker/cache
           chmod 777 ~/polaris-docker/cache
 
-          # Run interactive container
+          # Pull the image first
+          docker pull python:3.9-slim
+
+          # Run interactive container with a command that keeps it running
           docker run -d --name polaris-linux-container \
             -v ${{ github.workspace }}:/github/workspace \
             -v ~/polaris-docker/cache:/opt/polaris \
-            python:3.9-slim
+            python:3.9-slim \
+            tail -f /dev/null
 
+          # Verify container is running
+          docker ps | grep polaris-linux-container
+
+          echo "Container started successfully"
+
+      - name: Install Dependencies
+        run: |
           # Install necessary packages in the container
-          docker exec -i polaris-linux-container bash -c '
+          docker exec polaris-linux-container bash -c '
             apt-get update && apt-get install -y curl unzip
             mkdir -p /opt/bridge
+            echo "Dependencies installed successfully"
           '
 
       - name: Run Polaris Scan in Linux Container
         run: |
           # Download Bridge CLI inside the container
-          docker exec -i polaris-linux-container bash -c '
+          docker exec polaris-linux-container bash -c '
+            echo "Downloading Bridge CLI..."
             curl -sSL https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc1/bridge-cli-bundle-linux64.zip > /opt/bridge/bridge-cli.zip
             unzip -q -o /opt/bridge/bridge-cli.zip -d /opt/bridge
 
-            # Run Polaris scan
+            echo "Running Polaris scan..."
+            cd /github/workspace
             /opt/bridge/bridge polaris \
               --polaris.url="${{ secrets.POLARIS_SERVER_URL }}" \
               --polaris.token="${{ secrets.POLARIS_ACCESS_TOKEN }}" \
@@ -55,7 +69,7 @@ jobs:
       - name: Enter Interactive Mode
         run: |
           echo "Entering interactive mode. Type 'exit' when done."
-          docker exec -it polaris-linux-container bash
+          docker exec -it polaris-linux-container bash || echo "Failed to enter interactive mode"
 
       - name: Cleanup
         if: always()
