@@ -48,7 +48,7 @@ jobs:
           # Download Bridge CLI inside the container
           docker exec polaris-linux-container bash -c '
             echo "Downloading Bridge CLI..."
-            curl -sSL https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc1/bridge-cli-bundle-linux64.zip > /opt/bridge/bridge-cli.zip
+            curl -sSL https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc1/bridge-cli-bundle-3.9.0rc1-linux64.zip  > /opt/bridge/bridge-cli.zip
             unzip -q -o /opt/bridge/bridge-cli.zip -d /opt/bridge
 
             echo "Running Polaris scan..."
