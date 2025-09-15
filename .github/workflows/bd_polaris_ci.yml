@@ -24,7 +24,7 @@ jobs:
           #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
           #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
 
-          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc1/bridge-cli-bundle-3.9.0rc1-macosx.zip
+          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.8.1rc1/bridge-cli-bundle-3.8.1rc1-macosx.zip
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc1/bridge-cli-bundle-3.9.0rc1-macosx.zip
 
   
