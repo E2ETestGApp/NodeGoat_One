@@ -76,7 +76,6 @@ jobs:
           polaris_prComment_enabled: true
           github_token: ${{ secrets.BD_GITHUB_TOKEN }}
                 ### Mark build status if policy violating issues are found
-
         # Rapid Scans
           #polaris_test_sast_Type: 'SAST_RAPID'   
           #polaris_test_sast_Type: 'SAST_FULL'      
