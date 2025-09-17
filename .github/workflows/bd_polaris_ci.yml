@@ -42,8 +42,12 @@ jobs:
           #Test Location - new resource
           # polaris_test_sast_location: hybrid
           # polaris_test_sca_location: hybrid
+           
+           #Test Location - new resource
+          polaris_test_sast_location: remote
+          # polaris_test_sca_location: hybrid
 
-          polaris_test_sca_location: local
+          #polaris_test_sca_location: local
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
           include_diagnostics: true
@@ -58,7 +62,7 @@ jobs:
         ### Uncomment below configuration for source code upload 
           #polaris_assessment_mode: "SOURCE_UPLOAD"
           #polaris_assessment_mode: "CI"
-          #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e"
+          project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e"
           #project_source_excludes: "artifacts,config,test,*.md,*.yml" # Accepts Multiple Values
           #project_source_archive: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e.zip"
           # project_source_preserveSymLinks: true
