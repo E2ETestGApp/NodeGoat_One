@@ -24,6 +24,8 @@ jobs:
           #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
           #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
 
+          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.7.9/bridge-cli-bundle-3.7.9-macosx.zip
+          
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.8.1rc1/bridge-cli-bundle-3.8.1rc1-macosx.zip
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc1/bridge-cli-bundle-3.9.0rc1-macosx.zip
   
@@ -40,11 +42,11 @@ jobs:
           #polaris_assessment_types: "SAST"
 
           #Test Location - new resource
-          #polaris_test_sast_location: remote
-          #polaris_test_sca_location: remote
+          # polaris_test_sast_location: remote
+          # polaris_test_sca_location: remote
 
            #Test Location - new resource
-          polaris_test_sast_location: local
+          #polaris_test_sast_location: local
           
 
           #polaris_test_sast_location: hybrid
@@ -61,7 +63,7 @@ jobs:
          # polaris_waitForScan: false  # Used to support the async mode
 
         ### Uncomment below configuration for source code upload 
-          #polaris_assessment_mode: "SOURCE_UPLOAD"
+          polaris_assessment_mode: "SOURCE_UPLOAD"
           #polaris_assessment_mode: "CI"
           project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e"
           #project_source_excludes: "artifacts,config,test,*.md,*.yml" # Accepts Multiple Values
