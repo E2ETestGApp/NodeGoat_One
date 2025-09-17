@@ -12,6 +12,7 @@ jobs:
       - name: SRM Scan
         uses: blackduck-inc/black-duck-security-scan@v2.4.0 
         with:
+          
           ### SCANNING: Required fields
           srm_url: ${{ secrets.SRM_URL }}
           srm_apikey: ${{ secrets.SRM_API_KEY }}
