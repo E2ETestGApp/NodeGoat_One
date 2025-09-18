@@ -13,7 +13,7 @@ jobs:
     - name: Polaris Full Scan
       id: polaris-full-scan
       if: ${{ github.event_name != 'pull_request' }}
-      uses: blackduck-inc/black-duck-security-scan@v2
+      uses: blackduck-inc/black-duck-security-scan@v2.4.0
       with:
         polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
         polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
@@ -42,8 +42,9 @@ jobs:
         # polaris_test_sca_type: "SCA-SIGNATURE"
 
         ### Uncomment this to use Source Upload method. Default value is hybrid (build based)
-        # polaris_test_sast_location: "remote"
-        # polaris_test_sca_location: "remote"
+        #polaris_test_sast_location: "remote"
+        #polaris_test_sca_location: "remote"
+        #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e"
         # project_source_archive: ${{ vars.PROJECT_SOURCE_ARCHIVE }}
         # project_source_excludes: ${{ vars.PROJECT_SOURCE_EXCLUDES }} # Accepts Multiple Values
         # project_source_preserveSymLinks: true
