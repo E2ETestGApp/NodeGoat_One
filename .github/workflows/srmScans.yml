@@ -14,7 +14,7 @@ jobs:
         with:
           
           ### SCANNING: Required fields
-          bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc3/bridge-cli-bundle-3.9.0rc3-macosx.zip"
+          #bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc3/bridge-cli-bundle-3.9.0rc3-macosx.zip"
           srm_url: ${{ secrets.SRM_URL }}
           srm_apikey: ${{ secrets.SRM_API_KEY }}
           srm_assessment_types: "SCA,SAST" 
