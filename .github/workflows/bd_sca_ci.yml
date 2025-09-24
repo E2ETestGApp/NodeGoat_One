@@ -24,6 +24,7 @@ jobs:
           blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
 
           #Fix PR Config
+          
           # blackducksca_fixpr_enabled: true
           # blackducksca_fixpr_maxCount: 1
           # blackducksca_fixpr_filter_severities: 'CRITICAL,HIGH'
