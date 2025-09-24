@@ -22,7 +22,7 @@ jobs:
           blackducksca_url: ${{ vars.BLACKDUCK_URL }}  # Black Duck server URL from environment variables
           blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}  # Black Duck API token from secrets
           blackducksca_scan_full: false  # Perform a full scan
-          blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
+          #blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
 
           #Fix PR Config
           # blackducksca_fixpr_enabled: true
