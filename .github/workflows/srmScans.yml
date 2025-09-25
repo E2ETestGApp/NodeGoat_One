@@ -20,6 +20,7 @@ jobs:
           srm_assessment_types: "SCA,SAST" 
           srm_project_name: "Node_Goat_e2e_Reg_Srm"
           include_diagnostics: true
+          
           ### Mark build status if policy violating issues are found
           # mark_build_status: 'success'
           
