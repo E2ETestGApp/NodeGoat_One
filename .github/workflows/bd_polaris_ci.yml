@@ -33,7 +33,8 @@ jobs:
           # polaris_project_name: "Node_Goat_Repo_Test_Dir_Aug20"
           #polaris_application_name: "Node_Goat_Repo_Test_Archive_Aug20"
           #polaris_project_name: "Node_Goat_Repo_Test_Archive_Aug20"
-          
+            
+
           #polaris_assessment_types: "SCA,SAST"
           polaris_assessment_types: "SAST"
 
@@ -55,7 +56,7 @@ jobs:
          # polaris_waitForScan: false  # Used to support the async mode
 
         ### Uncomment below configuration for source code upload 
-          project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/SastScaIssue.zip"
+          #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/SastScaIssue.zip"
           #polaris_assessment_mode: "SOURCE_UPLOAD"
           #polaris_assessment_mode: "CI"
           #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e"
