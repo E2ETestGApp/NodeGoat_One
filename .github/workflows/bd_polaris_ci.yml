@@ -43,7 +43,7 @@ jobs:
           #polaris_assessment_types: "SAST"
 
           #Test Location - new resource
-          polaris_test_sast_location: local
+          polaris_test_sast_location: hybrid
           polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
