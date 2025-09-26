@@ -26,8 +26,8 @@ jobs:
           #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
 
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.8.1rc1/bridge-cli-bundle-3.8.1rc1-macosx.zip
-          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-macosx.zip
-  
+          #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-macosx.zip
+          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-linux64.zip
           #polaris_application_name: "Node_Goat_e2e"
           #polaris_project_name: "Node_Goat_e2e"
           # polaris_application_name: "Node_Goat_Repo_Test_Dir_Aug20"
