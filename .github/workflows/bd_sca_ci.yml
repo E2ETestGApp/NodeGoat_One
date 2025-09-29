@@ -26,7 +26,7 @@ jobs:
 
           #Fix PR Config
           
-          # blackducksca_fixpr_enabled: true
+          blackducksca_fixpr_enabled: true
           # blackducksca_fixpr_maxCount: 1
           # blackducksca_fixpr_filter_severities: 'CRITICAL,HIGH'
           # blackducksca_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
