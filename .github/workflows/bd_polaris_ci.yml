@@ -38,7 +38,6 @@ jobs:
 
           polaris_assessment_types: "SCA,SAST"
           #polaris_assessment_types: "SAST"
-
           #polaris_assessment_types: "SCA"
           #polaris_assessment_types: "SAST"
 
