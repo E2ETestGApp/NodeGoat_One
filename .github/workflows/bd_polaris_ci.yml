@@ -45,7 +45,7 @@ jobs:
           polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
-          include_diagnostics: true
+          #include_diagnostics: true
 
          ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
