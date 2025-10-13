@@ -19,12 +19,11 @@ jobs:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}  # Set project name based on repo name
         with:
           #detect_install_directory: '/Users/madhavanr/bd-detect'  # Specify the installation directory for Black Duck Detect 
-          bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-macosx.zip"
+          #bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-macosx.zip"
           blackducksca_url: ${{ vars.BLACKDUCK_URL }}  # Black Duck server URL from environment variables
           blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}  # Black Duck API token from secrets
           blackducksca_scan_full: true  # Perform a full scan
           blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
-
           #Fix PR Config
           blackducksca_fixpr_enabled: true
           # blackducksca_fixpr_maxCount: 1
