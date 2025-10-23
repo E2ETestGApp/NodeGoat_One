@@ -8,13 +8,14 @@ on:
 jobs:
   build:  # Define a job named 'build'
     #runs-on: [sh_mac_mdn]  # Specify the runner to execute the job
-    runs-on: [sh_mac_mdn_arm]  # Specify the runner to execute the job
+    #runs-on: [sh_mac_mdn_arm]  # Specify the runner to execute the job
+    runs-on: self-hosted
     steps:  # List of steps to execute in this job
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4  # Use the checkout action to clone the repo
       - name: Black Duck SCA Full Scan  # Step for running a full Black Duck scan
         id: black-duck-full-scan  # Unique ID for this step
-        uses: blackduck-inc/black-duck-security-scan@v2.5.0  # Use the Black Duck security scan action
+        uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
        
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}  # Set project name based on repo name
@@ -23,8 +24,8 @@ jobs:
           #bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-macosx.zip"
           blackducksca_url: ${{ vars.BLACKDUCK_URL }}  # Black Duck server URL from environment variables
           blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}  # Black Duck API token from secrets
-          blackducksca_scan_full: true  # Perform a full scan
-          blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
+          #blackducksca_scan_full: true  # Perform a full scan
+          #blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
           #Fix PR Config
           # blackducksca_fixpr_enabled: true
           # blackducksca_fixpr_maxCount: 1
