@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   build:  # Define a job named 'build'
-    runs-on: [sh_mac_mdn]  # Self Hosted Runner mac
+    runs-on: [sh_mac_mdn_arm]  # Self Hosted Runner mac
     #runs-on: [self-hosted,linux, docker]  # Self Hosted Runner docker linux
     #runs-on: [ubuntu-latest]
     #runs-on: [windows-latest]
@@ -19,12 +19,12 @@ jobs:
         #uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
         uses: blackduck-inc/black-duck-security-scan@v2.5.0
         with:
-          #polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
-          #polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+          polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
+          polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
           #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
-          polaris_server_url: ${{ secrets.POLARIS_CDEV_SERVER_URL }}
-          polaris_access_token: ${{ secrets.POLARIS_CDEV_ACCESS_TOKEN }}
+          #polaris_server_url: ${{ secrets.POLARIS_CDEV_SERVER_URL }}
+          #polaris_access_token: ${{ secrets.POLARIS_CDEV_ACCESS_TOKEN }}
 
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.8.1rc1/bridge-cli-bundle-3.8.1rc1-macosx.zip
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-macosx.zip
@@ -43,8 +43,8 @@ jobs:
           #polaris_assessment_types: "SAST"
 
           #Test Location - new resource
-          polaris_test_sast_location: hybrid
-          polaris_test_sca_location: hybrid
+          #polaris_test_sast_location: hybrid
+          #polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
           #include_diagnostics: true
@@ -66,7 +66,7 @@ jobs:
           # project_source_preserveSymLinks: true
     
         ### SARIF report generation and upload to GitHub Adavanced Security Tab: Uncomment below to enable
-         # polaris_reports_sarif_create: true  
+          polaris_reports_sarif_create: true  
           #polaris_reports_sarif_groupSCAIssues: true
         #   polaris_reports_sarif_issue_types: 'SCA,SAST'
         #   polaris_reports_sarif_file_path: '/Users/madhavanr/GitHubTest_E2E/sarif_Path/Polris_Sarif_Reports.json' # File path (including file name) where SARIF report is created.
