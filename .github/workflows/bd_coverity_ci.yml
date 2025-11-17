@@ -16,21 +16,21 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
         with:
          #Scanning Reqiured Fileds ** CNC/Thin client
-          coverity_url: ${{ secrets.COVERITY_URL }}
-          coverity_user: ${{ secrets.COVERITY_USER }}
-          coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
-          coverity_version: "2025.9.0"
-          coverity_install_directory: "/Users/madhavanr/cove"
+          #coverity_url: ${{ secrets.COVERITY_URL }}
+          #coverity_user: ${{ secrets.COVERITY_USER }}
+          #coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
+          #coverity_version: "2025.9.0"
+          #coverity_install_directory: "/Users/madhavanr/cove"
           #coverity_project_name: "MDN_Coverity_CNC_Aug25"
           # coverity_stream_name:  "MDN_Coverity_CNC_Aug25"
 
         #  #Coverity Classic /Local 
-          #coverity_url: ${{ secrets.COVERITY_CLASSIC_URL }}
-          #coverity_user: ${{ secrets.COVERITY_CLASSIC_USER }}
-          #coverity_passphrase: ${{ secrets.COVERITY_CLASSIC_PASSPHRASE }}
+          coverity_url: ${{ secrets.COVERITY_CLASSIC_URL }}
+          coverity_user: ${{ secrets.COVERITY_CLASSIC_USER }}
+          coverity_passphrase: ${{ secrets.COVERITY_CLASSIC_PASSPHRASE }}
           #coverity_project_name: "MDN_Local_Coverity_Aug25_SCAN1"
           #coverity_stream_name:  "MDN_Local_Coverity_Aug25_SCAN1"
-          #coverity_local: true
+          coverity_local: true
 
          ### POLICY ENFORCEMENT: Uncomment to break build on policy
           coverity_policy_view: 'Outstanding Issues' 
@@ -42,5 +42,5 @@ jobs:
            ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
           include_diagnostics: true
          # Mark build status if policy violating issues are found
-          #mark_build_status: 'success'
+          mark_build_status: 'success'
       
