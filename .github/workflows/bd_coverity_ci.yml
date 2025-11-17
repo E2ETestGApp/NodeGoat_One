@@ -15,6 +15,7 @@ jobs:
       - name: Black Duck Coverity Scan  # Step for running a full CNC Scan
         uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
         with:
+          bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.10.0rc2/bridge-cli-bundle-3.10.0rc2-macos_arm.zip"
          #Scanning Reqiured Fileds ** CNC/Thin client
           bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.10.0rc2/bridge-cli-bundle-3.10.0rc2-macos_arm.zip"
           coverity_url: ${{ secrets.COVERITY_URL }}
