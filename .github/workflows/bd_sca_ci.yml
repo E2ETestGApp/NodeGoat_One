@@ -9,7 +9,7 @@ jobs:
   build:  # Define a job named 'build'
     #runs-on: [sh_mac_mdn]  # Specify the runner to execute the job
     runs-on: [sh_mac_mdn_arm]  # Specify the runner to execute the job
-    runs-on: self-hosted
+    #runs-on: self-hosted
     steps:  # List of steps to execute in this job
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4  # Use the checkout action to clone the repo
