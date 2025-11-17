@@ -33,8 +33,9 @@ jobs:
 
          ### POLICY ENFORCEMENT: Uncomment to break build on policy
           #coverity_policy_view: 'Outstanding Issues' 
-
         ### PULL REQUEST COMMENTS:
+
+        
           coverity_prComment_enabled: true
           coverity_prComment_impacts: 'High,Medium,Low,Audit'
           github_token: ${{ secrets.BD_GITHUB_TOKEN }}  # Black Duck API token from secrets
