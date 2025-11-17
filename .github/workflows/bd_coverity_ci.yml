@@ -17,7 +17,7 @@ jobs:
         with:
           bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.10.0rc2/bridge-cli-bundle-3.10.0rc2-macos_arm.zip"
          #Scanning Reqiured Fileds ** CNC/Thin client
-          bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.10.0rc2/bridge-cli-bundle-3.10.0rc2-macos_arm.zip"
+         #bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.10.0rc2/bridge-cli-bundle-3.10.0rc2-macos_arm.zip"
           coverity_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
