@@ -1,4 +1,4 @@
-name: Integrations Scan # Name of the workflow
+name: Integrations Scan
 on:
   push:  # Trigger the workflow on push events
     branches: [main, master, develop, stage, release]  # Specify branches to trigger on push
