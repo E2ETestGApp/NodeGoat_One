@@ -24,7 +24,6 @@ jobs:
           coverity_install_directory: "/Users/madhavanr/cove"
           #coverity_project_name: "MDN_Coverity_CNC_Aug25"
           # coverity_stream_name:  "MDN_Coverity_CNC_Aug25"
-
         #  #Coverity Classic /Local 
           #coverity_url: ${{ secrets.COVERITY_CLASSIC_URL }}
           #coverity_user: ${{ secrets.COVERITY_CLASSIC_USER }}
