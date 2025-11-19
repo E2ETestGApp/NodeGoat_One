@@ -41,16 +41,16 @@ jobs:
           #polaris_application_name: "Node_Goat_Repo_Test_Archive_Aug20"
           #polaris_project_name: "Node_Goat_Repo_Test_Archive_Aug20"
 
-           polaris_assessment_types: "SCA,SAST"
-          #polaris_assessment_types: "SAST"
+           #polaris_assessment_types: "SCA,SAST"
+           polaris_assessment_types: "SAST"
           #polaris_assessment_types: "SCA"
           #polaris_assessment_types: "SAST"
           #coverity.version: "2025.6.0"
           
 
           #Test Location - new resource
-           polaris_test_sast_location: remote
-           polaris_test_sca_location: remote
+           polaris_test_sast_location: hybrid
+           #polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
           #include_diagnostics: true
@@ -63,7 +63,7 @@ jobs:
          # polaris_waitForScan: false  # Used to support the async mode
 
         ### Uncomment below configuration for source code upload 
-           project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/SastScaIssueSSS.zip"
+          #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/SastScaIssueSSS.zip"
           #polaris_assessment_mode: "SOURCE_UPLOAD"
           #polaris_assessment_mode: "CI"
           #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e"
