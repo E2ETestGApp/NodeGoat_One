@@ -63,7 +63,7 @@ jobs:
          # polaris_waitForScan: false  # Used to support the async mode
 
         ### Uncomment below configuration for source code upload 
-          #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/SastScaIssue.zip"
+          #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/SastScaIssueSSS.zip"
           #polaris_assessment_mode: "SOURCE_UPLOAD"
           #polaris_assessment_mode: "CI"
           #project_directory: "/Users/madhavanr/GitHubTest_E2E/Repos/Node_Goat_e2e"
