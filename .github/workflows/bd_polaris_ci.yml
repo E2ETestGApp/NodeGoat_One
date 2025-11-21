@@ -17,14 +17,15 @@ jobs:
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Polaris Full Scan  # Step for running a full CNC Scan
         #uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
-        uses: blackduck-inc/black-duck-security-scan@v2
+        #uses: blackduck-inc/black-duck-security-scan@v2
+        uses: blackduck-inc/black-duck-security-scan@SIGINT-3342
         with:
            
            detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
            coverity.version: '2025.6.2'
-           
+
            #bridgecli_download_url: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/3.9.2/bridge-cli-bundle-3.9.2-macos_arm.zip
           
           #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
