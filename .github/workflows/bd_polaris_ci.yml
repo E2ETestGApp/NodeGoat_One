@@ -18,7 +18,6 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2.4.0  # Use the Black Duck security scan action
         #uses: blackduck-inc/black-duck-security-scan@v2
         with:
-           
            detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
