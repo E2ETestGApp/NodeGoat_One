@@ -43,7 +43,7 @@ jobs:
            #polaris_assessment_types: "SAST"
            #polaris_assessment_types: "SCA"
           #polaris_assessment_types: "SAST"
-          #coverity.version: "2025455.6.0"
+           coverity.version: "2025455.6.2"
           
 
           #Test Location - new resource
