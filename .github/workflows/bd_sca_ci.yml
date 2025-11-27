@@ -16,7 +16,6 @@ jobs:
       - name: Black Duck SCA Full Scan  # Step for running a full Black Duck scan
         id: black-duck-full-scan  # Unique ID for this step
         uses: blackduck-inc/black-duck-security-scan@v2  # Use the Black Duck security scan action
-       
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}  # Set project name based on repo name
            # NO_PROXY: 'repo.blackduck.com, artifactory.tools.duckutil.net'
