@@ -20,7 +20,7 @@ jobs:
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}  # Set project name based on repo name
            # NO_PROXY: 'repo.blackduck.com, artifactory.tools.duckutil.net'
-          HTTPS_PROXY: ${{ secrets.PROXY }}
+           # HTTPS_PROXY: ${{ secrets.PROXY }}
         with:
           #detect_install_directory: '/Users/madhavanr/bd-detect'  # Specify the installation directory for Black Duck Detect 
           detect_args: '--detect.diagnostic=true'
