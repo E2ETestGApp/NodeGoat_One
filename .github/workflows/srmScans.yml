@@ -12,7 +12,6 @@ jobs:
       - name: SRM Scan
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
-          
           ### SCANNING: Required fields
           bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.10.1rc2/bridge-cli-bundle-3.10.1rc2-macos_arm.zip"
           srm_url: ${{ secrets.SRM_URL }}
