@@ -28,8 +28,8 @@ jobs:
           #polaris_server_url: ${{ secrets.POLARIS_CDEV_SERVER_URL }}
           #polaris_access_token: ${{ secrets.POLARIS_CDEV_ACCESS_TOKEN }}
 
-          #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.8.1rc1/bridge-cli-bundle-3.8.1rc1-macosx.zip
-          #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-macosx.zip
+           bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.10.1rc2/bridge-cli-bundle-3.10.1rc2-macos_arm.zip
+          #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3..0rc8-macosx.zip
           
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-linux64.zip
           #polaris_application_name: "Node_Goat_e2e"
