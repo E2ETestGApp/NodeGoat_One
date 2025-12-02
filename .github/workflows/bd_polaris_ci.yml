@@ -22,7 +22,7 @@ jobs:
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
            polaris_assessment_types: "SAST"
-           coverity_version: "2025.6.2"
+           #coverity_version: "2025.6.2"
 
            
            #bridgecli_download_url: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/3.9.2/bridge-cli-bundle-3.9.2-macos_arm.zip
