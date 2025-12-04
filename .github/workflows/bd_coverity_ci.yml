@@ -22,7 +22,7 @@ jobs:
           coverity_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
-          coverity_version: "2025.6.2"
+          coverity_version: "2025.9.0"
           #coverity_install_directory: "/Users/madhavanr/cove1"
           #coverity_project_name: "MDN_Coverity_CNC_Aug25"
           # coverity_stream_name:  "MDN_Coverity_CNC_Aug25"
@@ -33,7 +33,7 @@ jobs:
           #coverity_project_name: "MDN_Local_Coverity_Aug25_SCAN1"
           #coverity_stream_name:  "MDN_Local_Coverity_Aug25_SCAN1"
           #coverity_local: true
-          coverity_waitforscan: false
+          #coverity_waitforscan: false
 
          ### POLICY ENFORCEMENT: Uncomment to break build on policy
           coverity_policy_view: 'Outstanding Issues' 
