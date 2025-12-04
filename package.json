@@ -22,7 +22,7 @@
     "underscore": "^1.8.3",
     "request": "2.88.0",
     "lodash": "4.17.11",
-    "minimist": "0.0.8",
+    "minimist": "0.2.4",
     "jsonwebtoken":"8.5.1"
   },
   "comments": {
