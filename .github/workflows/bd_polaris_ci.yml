@@ -15,8 +15,9 @@ jobs:
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Polaris Full Scan  # Step for running a full CNC Scan
-        uses: blackduck-inc/black-duck-security-scan@v2.7.0  # Use the Black Duck security scan action
+        #uses: blackduck-inc/black-duck-security-scan@v2.7.0  # Use the Black Duck security scan action
         #uses: blackduck-inc/black-duck-security-scan@v2
+        uses: blackduck-inc/black-duck-security-scan@latest
         with:
            #detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
