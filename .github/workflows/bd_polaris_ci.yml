@@ -15,14 +15,14 @@ jobs:
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Polaris Full Scan  # Step for running a full CNC Scan
-        uses: blackduck-inc/black-duck-security-scan@v2.7.0  # Use the Black Duck security scan action
-        #uses: blackduck-inc/black-duck-security-scan@v2
+        #uses: blackduck-inc/black-duck-security-scan@v2.7.0  # Use the Black Duck security scan action
+        uses: blackduck-inc/black-duck-security-scan@v2
         with:
-           detect_args: '--detect.diagnostic=true'
+           #detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
            polaris_assessment_types: "SAST"
-           #coverity_version: "2025.6.2"
+           coverity_version: "2025.6.2"
            
            #bridgecli_download_url: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/3.9.2/bridge-cli-bundle-3.9.2-macos_arm.zip
            #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
@@ -36,8 +36,8 @@ jobs:
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.0rc8/bridge-cli-bundle-3.9.0rc8-linux64.zip
           #polaris_application_name: "Node_Goat_e2e"
           #polaris_project_name: "Node_Goat_e2e"
-           polaris_application_name: "Node_GoatTestProject_01"
-           polaris_project_name: "Node_GoatTestProject_01"
+           #polaris_application_name: "Node_GoatTestProject_01"
+           #polaris_project_name: "Node_GoatTestProject_01"
           #polaris_application_name: "Node_Goat_Repo_Test_Archive_Aug20"
           #polaris_project_name: "Node_Goat_Repo_Test_Archive_Aug20"
 
@@ -50,7 +50,7 @@ jobs:
            #polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
-          #include_diagnostics: true
+           include_diagnostics: true
 
          ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
