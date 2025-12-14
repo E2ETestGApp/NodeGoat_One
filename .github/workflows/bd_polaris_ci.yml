@@ -22,11 +22,11 @@ jobs:
            #detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
-           polaris_assessment_types: "SAST"
-           coverity_version: "2025.6.2"
+           polaris_assessment_types: "SAST,SCA"
+           #coverity_version: "2025.6.2"
         
           
-           #bridgecli_download_url: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/3.9.2/bridge-cli-bundle-3.9.2-macos_arm.zip
+           bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.11rc4/bridge-cli-bundle-3.11rc4-macos_arm.zip"
            #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
            #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
            #polaris_server_url: ${{ secrets.POLARIS_CDEV_SERVER_URL }}
