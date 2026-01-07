@@ -37,7 +37,7 @@ jobs:
           #blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
           #blackducksca_waitForScan: false
           blackducksca_reports_sarif_create: true
-          blackducksca_upload_sarif_report: true
+          #blackducksca_upload_sarif_report: true
           #Fix PR Config
           #blackducksca_fixpr_enabled: true
           #blackducksca_fixpr_maxCount: 2
