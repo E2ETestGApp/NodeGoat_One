@@ -49,8 +49,8 @@ jobs:
           #polaris_assessment_types: "SAST"
           
           #Test Location - new resource
-           #polaris_test_sast_location: hybrid
-           #polaris_test_sca_location: hybrid
+           polaris_test_sast_location: local
+           polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
            include_diagnostics: true
@@ -77,7 +77,7 @@ jobs:
            #polaris_reports_sarif_issue_types: 'SCA,SAST'
           #polaris_reports_sarif_file_path: '/Users/madhavanr/GitHubTest_E2E/sarif_Path/Polris_Sarif_Reports.json' # File path (including file name) where SARIF report is created.
            #polaris_reports_sarif_severities: "CRITICAL,HIGH"
-           polaris_upload_sarif_report: true 
+           #polaris_upload_sarif_report: true 
         # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when polaris_upload_sarif_report is set as true
 
  ### Below configuration is used to enable feedback from Polaris security testing as pull request comment
