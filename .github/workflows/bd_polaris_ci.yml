@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   build:  # Define a job named 'build'
-    runs-on: [sh_mac_mdn_arm]  # Self Hosted Runner mac
+    runs-on: [self-hosted]  # Self Hosted Runner mac
     #runs-on: [self-hosted,linux, docker]  # Self Hosted Runner docker linux
     #runs-on: [ubuntu-latest]
     #runs-on: [windows-latest]
@@ -26,7 +26,8 @@ jobs:
            #coverity_version: "2025.6.2"
         
           
-           bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.11rc4/bridge-cli-bundle-3.11rc4-macos_arm.zip"
+           bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
+          
            #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
            #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
            #polaris_server_url: ${{ secrets.POLARIS_CDEV_SERVER_URL }}
