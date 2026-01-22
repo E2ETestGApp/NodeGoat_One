@@ -19,7 +19,7 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2
         #uses: blackduck-inc/black-duck-security-scan@latest
         with:
-           #detect_args: '--detect.diagnostic=true'
+           detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
            polaris_assessment_types: "SAST,SCA"
@@ -49,11 +49,11 @@ jobs:
           #polaris_assessment_types: "SAST"
           
           #Test Location - new resource
-           polaris_test_sast_location: remote
-           polaris_test_sca_location: remote
+           polaris_test_sast_location: hybrid
+           polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
-           include_diagnostics: true
+           #include_diagnostics: true
 
          ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
@@ -85,7 +85,7 @@ jobs:
            github_token: ${{ secrets.BD_GITHUB_TOKEN }}
                 ### Mark build status if policy violating issues are found
         # Rapid Scans
-           #polaris_test_sast_Type: 'SAST_RAPID'   
+           polaris_test_sast_Type: 'SAST_RAPID'   
            #polaris_test_sast_Type: 'SAST_FULL'      
            mark_build_status: 'success'
 
