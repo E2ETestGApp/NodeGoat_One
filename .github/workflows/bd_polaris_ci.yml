@@ -49,7 +49,7 @@ jobs:
           #polaris_assessment_types: "SAST"
           
           #Test Location - new resource
-           polaris_test_sast_location: remote
+           polaris_test_sast_location: hybrid
            polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
@@ -72,8 +72,8 @@ jobs:
           # project_source_preserveSymLinks: true
     
         ### SARIF report generation and upload to GitHub Adavanced Security Tab: Uncomment below to enable
-           polaris_reports_sarif_create: true  
-           polaris_reports_sarif_groupSCAIssues: true
+           #polaris_reports_sarif_create: true  
+           #polaris_reports_sarif_groupSCAIssues: true
            #polaris_reports_sarif_issue_types: 'SCA,SAST'
           #polaris_reports_sarif_file_path: '/Users/madhavanr/GitHubTest_E2E/sarif_Path/Polris_Sarif_Reports.json' # File path (including file name) where SARIF report is created.
            #polaris_reports_sarif_severities: "CRITICAL,HIGH"
@@ -85,7 +85,7 @@ jobs:
            github_token: ${{ secrets.BD_GITHUB_TOKEN }}
                 ### Mark build status if policy violating issues are found
         # Rapid Scans
-           #polaris_test_sast_Type: 'SAST_RAPID'   
+           polaris_test_sast_Type: 'SAST_RAPID'   
            #polaris_test_sast_Type: 'SAST_FULL'      
            mark_build_status: 'success'
 
