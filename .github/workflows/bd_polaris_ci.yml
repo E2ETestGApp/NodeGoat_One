@@ -23,7 +23,7 @@ jobs:
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
            polaris_assessment_types: "SAST,SCA"
-           #coverity_version: "2025.6.2"
+           coverity_version: "2025.12.0"
         
           
            #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
@@ -49,7 +49,7 @@ jobs:
           #polaris_assessment_types: "SAST"
           
           #Test Location - new resource
-           polaris_test_sast_location: hybrid
+           polaris_test_sast_location: local
            polaris_test_sca_location: hybrid
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
