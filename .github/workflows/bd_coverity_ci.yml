@@ -13,11 +13,11 @@ jobs:
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Black Duck Coverity Scan  # Step for running a full CNC Scan
-        uses: blackduck-inc/black-duck-security-scan@v2.7.0
+        uses: blackduck-inc/black-duck-security-scan@v2.7.1
         #uses: blackduck-inc/black-duck-security-scan@v2
         
         with:
-          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
+          #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
           #Scanning Reqiured Fileds ** CNC/Thin client
           #coverity_url: ${{ secrets.COVERITY_URL }}
           #coverity_user: ${{ secrets.COVERITY_USER }}
