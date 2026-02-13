@@ -41,6 +41,7 @@ jobs:
           #Fix PR Config
           blackducksca_fixpr_enabled: true
           blackducksca_fixpr_maxCount: 2
+          
           #blackducksca_fixpr_filter_severities: 'CRITICAL,HIGH'
           #blackducksca_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
           github_token: ${{ secrets.BD_GITHUB_TOKEN }}  # GitHub token for authentication when posting comment
