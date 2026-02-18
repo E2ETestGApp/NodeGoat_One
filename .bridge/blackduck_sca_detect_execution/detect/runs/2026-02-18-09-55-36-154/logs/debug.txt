@@ -1,0 +1,26 @@
+2026-02-18T09:55:36,271Z INFO [DiagnosticLogger.java:33] Redirected to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-55-36-154/logs/debug.txt
+2026-02-18T09:55:36,271Z INFO [DiagnosticLogger.java:33] Redirected to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-55-36-154/logs/info.txt
+2026-02-18T09:55:36,271Z INFO [DiagnosticLogSystem.java:46] Attempting to restrict console to debug level (additional levels written to files).
+2026-02-18T09:55:36,272Z INFO [DiagnosticLogSystem.java:49] Adding additional log listeners to extractions.
+2026-02-18T09:55:36,272Z INFO [DiagnosticLogSystem.java:54] Diagnostics is now in control of logging!
+2026-02-18T09:55:36,272Z INFO [DiagnosticSystem.java:69] Creating configuration diagnostics reports.
+2026-02-18T09:55:36,273Z INFO [DiagnosticSystem.java:73] Diagnostics system is ready.
+2026-02-18T09:55:36,273Z DEBUG [DetectBoot.java:186] Main boot completed. Deciding what Detect should do.
+2026-02-18T09:55:36,273Z INFO [DetectBoot.java:192] 
+2026-02-18T09:55:36,362Z DEBUG [ProductDecider.java:39] Black Duck SCA will run ONLINE: A Black Duck SCA url was found.
+2026-02-18T09:55:36,363Z DEBUG [DetectBoot.java:242] Decided what products will be run. Starting product boot.
+2026-02-18T09:55:36,365Z DEBUG [ProductBoot.java:63] Detect product boot start.
+2026-02-18T09:55:36,365Z DEBUG [ProductBoot.java:98] Will boot Black Duck SCA product.
+2026-02-18T09:55:36,369Z DEBUG [BlackDuckConnectivityChecker.java:35] Detect will check communication with the Black Duck SCA server.
+2026-02-18T09:55:37,230Z ERROR [Slf4jIntLogger.java:57] The connection was not successful for an unknown reason. If an api token is being used, it could be incorrect.
+2026-02-18T09:55:37,230Z ERROR [BlackDuckConnectivityChecker.java:41] Failed to connect to the Black Duck SCA server
+2026-02-18T09:55:37,232Z DEBUG [Application.java:230] Detect boot completed.
+2026-02-18T09:55:37,233Z DEBUG [Application.java:251] Detect will NOT attempt to run.
+2026-02-18T09:55:37,234Z INFO [Application.java:188] 
+2026-02-18T09:55:37,235Z INFO [Application.java:258] 
+2026-02-18T09:55:37,235Z INFO [Application.java:261] Creating status file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-55-36-154/status/status.json
+2026-02-18T09:55:37,247Z INFO [Application.java:279] 
+2026-02-18T09:55:37,248Z DEBUG [Application.java:298] Detect shutdown begin.
+2026-02-18T09:55:37,249Z INFO [DiagnosticSystem.java:83] Finishing diagnostic mode.
+2026-02-18T09:55:37,249Z INFO [DiagnosticSystem.java:86] Finishing reports.
+2026-02-18T09:55:37,249Z INFO [DiagnosticSystem.java:93] Finishing logging.

@@ -1,0 +1,133 @@
+{
+  "formatVersion": "0.5.0",
+  "detectVersion": "11.2.1",
+  "projectName": "owasp-nodejs-goat",
+  "projectVersion": "1.3.0",
+  "detectors": [
+    {
+      "folder": "/Users/madhavanr/E2E/Projects/Node_Goat_e2e",
+      "detectorType": "NPM",
+      "detectorName": "NPM Package Lock",
+      "detectorAccuracy": "HIGH",
+      "extracted": true,
+      "status": "SUCCESS",
+      "statusCode": "PASSED",
+      "statusReason": "Passed",
+      "relevantFiles": [],
+      "explanations": [
+        "Found file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package-lock.json",
+        "Found file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package.json"
+      ],
+      "projectName": "owasp-nodejs-goat",
+      "projectVersion": "1.3.0",
+      "codeLocationCount": 1
+    },
+    {
+      "folder": "/Users/madhavanr/E2E/Projects/Node_Goat_e2e",
+      "detectorType": "GIT",
+      "detectorName": "Git",
+      "detectorAccuracy": "HIGH",
+      "extracted": true,
+      "status": "SUCCESS",
+      "statusCode": "PASSED",
+      "statusReason": "Passed",
+      "relevantFiles": [],
+      "explanations": [
+        "Found file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.git",
+        "Found executable: /usr/bin/git"
+      ],
+      "projectName": "BD-Integrations/Node_Goat_e2e",
+      "projectVersion": "master",
+      "codeLocationCount": 0
+    }
+  ],
+  "status": [
+    {
+      "key": "GIT",
+      "status": "SUCCESS"
+    },
+    {
+      "key": "NPM",
+      "status": "SUCCESS"
+    },
+    {
+      "key": "Signature scan / Snippet scan on /Users/madhavanr/E2E/Projects/Node_Goat_e2e",
+      "status": "SUCCESS"
+    }
+  ],
+  "issues": [],
+  "overallStatus": [
+    {
+      "key": "SUCCESS",
+      "status": "Detect exited successfully."
+    }
+  ],
+  "results": [
+    {
+      "location": "https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/components",
+      "message": "Black Duck SCA Project BOM: https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/components",
+      "sub_messages": []
+    }
+  ],
+  "unrecognizedPaths": {},
+  "codeLocations": [
+    {
+      "codeLocationName": "Node_Goat_e2e/owasp-nodejs-goat/1.3.0 signature"
+    },
+    {},
+    {
+      "codeLocationName": "owasp-nodejs-goat/1.3.0 bdio"
+    }
+  ],
+  "propertyValues": {
+    "blackduck.api.token": "****************************************************************************************************",
+    "blackduck.offline.mode": "false",
+    "blackduck.url": "https://saastest.app.blackduck.com",
+    "detect.bdio.file.name": "scan",
+    "detect.bdio.output.path": "/Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/bdio/blackduck_artifact",
+    "detect.blackduck.scan.mode": "INTELLIGENT",
+    "detect.cleanup": "false",
+    "detect.diagnostic": "true",
+    "detect.excluded.directories": "/Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge",
+    "detect.output.path": "/Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect",
+    "detect.wait.for.results": "true"
+  },
+  "operations": [
+    {
+      "startTimestamp": "2026-02-18 09:56:45.461",
+      "endTimestamp": "2026-02-18 09:56:46.032",
+      "descriptionKey": "Execute Detectors",
+      "status": "SUCCESS"
+    },
+    {
+      "startTimestamp": "2026-02-18 09:56:46.033",
+      "endTimestamp": "2026-02-18 09:56:46.037",
+      "descriptionKey": "SubProject Aggregate",
+      "status": "SUCCESS"
+    },
+    {
+      "startTimestamp": "2026-02-18 09:56:50.553",
+      "endTimestamp": "2026-02-18 09:56:54.131",
+      "descriptionKey": "Package_manager Upload",
+      "status": "SUCCESS"
+    },
+    {
+      "startTimestamp": "2026-02-18 09:57:09.665",
+      "endTimestamp": "2026-02-18 09:57:09.667",
+      "descriptionKey": "Create Online Signature Scan Batch",
+      "status": "SUCCESS"
+    },
+    {
+      "startTimestamp": "2026-02-18 09:57:12.892",
+      "endTimestamp": "2026-02-18 09:57:24.902",
+      "descriptionKey": "Execute Signature Scan CLI",
+      "status": "SUCCESS"
+    },
+    {
+      "startTimestamp": "2026-02-18 09:57:27.581",
+      "endTimestamp": "2026-02-18 09:57:27.581",
+      "descriptionKey": "Retrieve Container Scan Image File",
+      "status": "SUCCESS"
+    }
+  ]
+}

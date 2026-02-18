@@ -1,0 +1,186 @@
+2026-02-18T09:56:32,651Z INFO [DiagnosticLogger.java:33] Redirected to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/logs/debug.txt
+2026-02-18T09:56:32,651Z INFO [DiagnosticLogger.java:33] Redirected to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/logs/info.txt
+2026-02-18T09:56:32,651Z INFO [DiagnosticLogSystem.java:46] Attempting to restrict console to debug level (additional levels written to files).
+2026-02-18T09:56:32,652Z INFO [DiagnosticLogSystem.java:49] Adding additional log listeners to extractions.
+2026-02-18T09:56:32,652Z INFO [DiagnosticLogSystem.java:54] Diagnostics is now in control of logging!
+2026-02-18T09:56:32,652Z INFO [DiagnosticSystem.java:69] Creating configuration diagnostics reports.
+2026-02-18T09:56:32,653Z INFO [DiagnosticSystem.java:73] Diagnostics system is ready.
+2026-02-18T09:56:32,653Z DEBUG [DetectBoot.java:186] Main boot completed. Deciding what Detect should do.
+2026-02-18T09:56:32,653Z INFO [DetectBoot.java:192] 
+2026-02-18T09:56:32,752Z DEBUG [ProductDecider.java:39] Black Duck SCA will run ONLINE: A Black Duck SCA url was found.
+2026-02-18T09:56:32,753Z DEBUG [DetectBoot.java:242] Decided what products will be run. Starting product boot.
+2026-02-18T09:56:32,760Z DEBUG [ProductBoot.java:63] Detect product boot start.
+2026-02-18T09:56:32,760Z DEBUG [ProductBoot.java:98] Will boot Black Duck SCA product.
+2026-02-18T09:56:32,766Z DEBUG [BlackDuckConnectivityChecker.java:35] Detect will check communication with the Black Duck SCA server.
+2026-02-18T09:56:41,189Z INFO [BlackDuckConnectivityChecker.java:59] Successfully connected to Black Duck SCA (version 2025.10.2)!
+2026-02-18T09:56:41,190Z DEBUG [BlackDuckConnectivityChecker.java:62] Connected as: sa_centralintegrations
+2026-02-18T09:56:41,190Z DEBUG [BlackDuckConnectivityChecker.java:63] Server Roles: Global Project Administrator, Global Notification Viewer, Global Release Creator, Global Security Manager, Global Code Scanner, Project Creator, Global Project Viewer, Integration Manager, Global Project Manager, Custom Fields Administrator, Lite Global Project Manager, Policy Manager, License Manager, Component Manager, Copyright Editor
+2026-02-18T09:56:42,666Z DEBUG [BlackDuckConnectivityChecker.java:67] Groups: 
+2026-02-18T09:56:44,060Z DEBUG [DetectInfoUtility.java:29] You seem to be running in a MAC operating system.
+2026-02-18T09:56:44,060Z DEBUG [DetectInfoUtility.java:30] You seem to be using aarch64 architecture.
+2026-02-18T09:56:44,061Z DEBUG [PhoneHomeCredentialsFactory.java:46] Downloading phone home credentials.
+2026-02-18T09:56:45,435Z DEBUG [ProductBoot.java:78] Detect product boot completed.
+2026-02-18T09:56:45,436Z DEBUG [Application.java:230] Detect boot completed.
+2026-02-18T09:56:45,436Z DEBUG [Application.java:246] Detect will attempt to run.
+2026-02-18T09:56:45,439Z DEBUG [AirGapPathFinder.java:56] Guessed Detect jar location as /Users/madhavanr/.blackduck/bridge/tools/blackduck-detect/11.2.1/detect-11.2.1.jar
+2026-02-18T09:56:45,439Z DEBUG [AirGapPathFinder.java:23] Checking for jar file: /Users/madhavanr/.blackduck/bridge/tools/blackduck-detect/11.2.1/detect-11.2.1.jar
+2026-02-18T09:56:45,439Z DEBUG [AirGapPathFinder.java:25] Found detect jar file.
+2026-02-18T09:56:45,455Z INFO [StepHelper.java:62] ----------------------------------
+2026-02-18T09:56:45,455Z INFO [StepHelper.java:64] Will include the Docker tool.
+2026-02-18T09:56:45,459Z DEBUG [DetectableTool.java:90] Was not applicable.
+2026-02-18T09:56:45,459Z INFO [StepHelper.java:67] Docker actions finished.
+2026-02-18T09:56:45,459Z INFO [StepHelper.java:62] ----------------------------------
+2026-02-18T09:56:45,459Z INFO [StepHelper.java:64] Will include the Bazel tool.
+2026-02-18T09:56:45,461Z DEBUG [DetectableTool.java:90] Was not applicable.
+2026-02-18T09:56:45,461Z INFO [StepHelper.java:67] Bazel actions finished.
+2026-02-18T09:56:45,461Z INFO [StepHelper.java:62] ----------------------------------
+2026-02-18T09:56:45,461Z INFO [StepHelper.java:64] Will include the Detectors tool.
+2026-02-18T09:56:45,476Z DEBUG [DetectorTool.java:139] Starting detector file system traversal.
+2026-02-18T09:56:45,476Z INFO [DirectoryFinder.java:21] Searching for detectors.
+2026-02-18T09:56:45,481Z DEBUG [DirectoryFinder.java:61] filteredSubDirectories: [/Users/madhavanr/E2E/Projects/Node_Goat_e2e/Gruntfile.js, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/CODE_OF_CONDUCT.md, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/artifacts, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/nodemon.json, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/cypress.json, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.DS_Store, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/app, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/LICENSE, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/test, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/app.json, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/config, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.jshintignore, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/server.js, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/Dockerfile, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.jshintrc, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/README.md, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.dockerignore, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.gitignore, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package-lock.json, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package.json, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/CONTRIBUTING.md, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.github, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/docker-compose.yml, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/Procfile, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.travis.yml, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.idea]
+2026-02-18T09:56:45,482Z INFO [DirectoryEvaluator.java:42] Evaluating detectors. This may take a while.
+2026-02-18T09:56:45,482Z DEBUG [DirectoryEvaluator.java:52] Determining applicable detectors on the directory: /Users/madhavanr/E2E/Projects/Node_Goat_e2e
+2026-02-18T09:56:45,508Z DEBUG [DetectableEvaluator.java:28] Attempting NpmPackageLockDetectable
+2026-02-18T09:56:45,540Z DEBUG [NpmLockfileGraphTransformer.java:32] Processing project.
+2026-02-18T09:56:45,540Z DEBUG [NpmLockfileGraphTransformer.java:34] Found 657 packages in the lockfile.
+2026-02-18T09:56:45,629Z DEBUG [NpmLockfileGraphTransformer.java:43] Found 35 root dependencies.
+2026-02-18T09:56:45,631Z DEBUG [DirectoryEvaluator.java:103] Detector Type NPM Entry Point NPM Package Lock applied and was attempted
+2026-02-18T09:56:45,631Z DEBUG [DirectoryEvaluator.java:111] Detector results ("true" = succeeded): [NPM Package Lock: true]
+2026-02-18T09:56:45,638Z DEBUG [DetectableEvaluator.java:28] Attempting GitCliDetectable
+2026-02-18T09:56:45,642Z INFO [Slf4jIntLogger.java:42] Running executable >/usr/bin/git --version
+2026-02-18T09:56:45,927Z DEBUG [ExecutableStreamThread.java:41] git version 2.39.5 (Apple Git-154)
+2026-02-18T09:56:45,928Z INFO [Slf4jIntLogger.java:42] Process return code: 0
+2026-02-18T09:56:45,930Z INFO [Slf4jIntLogger.java:42] Running executable >/usr/bin/git config --get remote.origin.url
+2026-02-18T09:56:45,958Z INFO [Slf4jIntLogger.java:42] Process return code: 0
+2026-02-18T09:56:45,959Z INFO [Slf4jIntLogger.java:42] Running executable >/usr/bin/git rev-parse --abbrev-ref HEAD
+2026-02-18T09:56:45,988Z DEBUG [ExecutableStreamThread.java:41] master
+2026-02-18T09:56:45,989Z INFO [Slf4jIntLogger.java:42] Process return code: 0
+2026-02-18T09:56:45,989Z INFO [Slf4jIntLogger.java:42] Running executable >/usr/bin/git rev-parse HEAD
+2026-02-18T09:56:46,013Z DEBUG [ExecutableStreamThread.java:41] 6c78317c22c0c41e4fa654dfc8d4cdacc08dcf78
+2026-02-18T09:56:46,014Z INFO [Slf4jIntLogger.java:42] Process return code: 0
+2026-02-18T09:56:46,015Z DEBUG [DirectoryEvaluator.java:103] Detector Type GIT Entry Point Git applied and was attempted
+2026-02-18T09:56:46,015Z DEBUG [DirectoryEvaluator.java:111] Detector results ("true" = succeeded): [Git: true]
+2026-02-18T09:56:46,020Z DEBUG [DirectoryEvaluator.java:82] Found (2) applicable detectors in: /Users/madhavanr/E2E/Projects/Node_Goat_e2e
+2026-02-18T09:56:46,020Z DEBUG [DetectorTool.java:153] Finished detectors.
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:214] ======================================================================================================
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:215] Detector Report
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:216] ======================================================================================================
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:221] 	/Users/madhavanr/E2E/Projects/Node_Goat_e2e (depth 0)
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:223] 		NPM Package Lock: SUCCESS
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:225] 			Found file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package-lock.json
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:225] 			Found file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package.json
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:223] 		Git: SUCCESS
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:225] 			Found file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.git
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:225] 			Found executable: /usr/bin/git
+2026-02-18T09:56:46,023Z INFO [DetectorTool.java:249] ----------------------------------
+2026-02-18T09:56:46,024Z DEBUG [DetectorTool.java:300] Publishing file events.
+2026-02-18T09:56:46,026Z INFO [DiagnosticFileCapture.java:34] Saved file to diagnostics zip: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package-lock.json
+2026-02-18T09:56:46,026Z INFO [DiagnosticFileCapture.java:34] Saved file to diagnostics zip: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package.json
+2026-02-18T09:56:46,028Z DEBUG [DetectorEvaluationNameVersionDecider.java:59] A valid preferred detector type was not provided, deciding project name automatically.
+2026-02-18T09:56:46,029Z INFO [ArbitraryNameVersionDecision.java:32] The following project names were found: 
+2026-02-18T09:56:46,029Z INFO [ArbitraryNameVersionDecision.java:33] 	NPM: owasp-nodejs-goat, 1.3.0
+2026-02-18T09:56:46,029Z INFO [ArbitraryNameVersionDecision.java:47] Chose to use NPM at depth 0 for project name and version. Override with detect.project.detector.
+2026-02-18T09:56:46,029Z DEBUG [DetectorTool.java:197] Finished evaluating detectors for project info.
+2026-02-18T09:56:46,030Z DEBUG [DetectorTool.java:161] Finished running detectors.
+2026-02-18T09:56:46,030Z DEBUG [DebugLogReportWriter.java:19] 
+2026-02-18T09:56:46,030Z DEBUG [DebugLogReportWriter.java:19] ======================================================================================================
+2026-02-18T09:56:46,030Z DEBUG [DebugLogReportWriter.java:19] Search results
+2026-02-18T09:56:46,030Z DEBUG [DebugLogReportWriter.java:19] ======================================================================================================
+2026-02-18T09:56:46,030Z DEBUG [DebugLogReportWriter.java:19] /Users/madhavanr/E2E/Projects/Node_Goat_e2e
+2026-02-18T09:56:46,030Z DEBUG [DebugLogReportWriter.java:19] 	FOUND: GIT, NPM
+2026-02-18T09:56:46,030Z DEBUG [DebugLogReportWriter.java:19] ======================================================================================================
+2026-02-18T09:56:46,030Z DEBUG [DebugLogReportWriter.java:19] 
+2026-02-18T09:56:46,032Z INFO [DetectConfigurationFactory.java:241] Quack Patch cannot run because not all required properties are set. Please check your configuration.
+2026-02-18T09:56:46,032Z INFO [StepHelper.java:67] Detectors actions finished.
+2026-02-18T09:56:46,032Z INFO [UniversalStepRunner.java:119] ----------------------------------
+2026-02-18T09:56:46,032Z DEBUG [UniversalStepRunner.java:120] Completed code location tools.
+2026-02-18T09:56:46,032Z DEBUG [UniversalStepRunner.java:122] Determining project info.
+2026-02-18T09:56:46,033Z DEBUG [ProjectNameVersionDecider.java:59] Using the first ordered tool with project info: DETECTOR
+2026-02-18T09:56:46,033Z INFO [UniversalStepRunner.java:126] Project name: owasp-nodejs-goat
+2026-02-18T09:56:46,033Z INFO [UniversalStepRunner.java:127] Project version: 1.3.0
+2026-02-18T09:56:46,033Z DEBUG [DetectRun.java:93] Integrated Matching Correlation ID: 72a09a2c-2a1b-48f1-9afd-79bb4f579e1e
+2026-02-18T09:56:46,135Z DEBUG [CreateAggregateBdio2FileOperation.java:67] BDIO Generated: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/bdio/blackduck_artifact/scan.bdio
+2026-02-18T09:56:46,139Z DEBUG [BlackDuckProjectVersionStepRunner.java:99] No clone project or version name supplied. Will not clone.
+2026-02-18T09:56:46,139Z DEBUG [BlackDuckProjectVersionStepRunner.java:86] No project group was supplied. Will not assign a project group.
+2026-02-18T09:56:46,139Z DEBUG [BlackDuckProjectVersionStepRunner.java:109] No project version licenses were supplied.  Will not update licenses.
+2026-02-18T09:56:49,025Z DEBUG [BlackDuckProjectVersionStepRunner.java:51] No 'Application ID' to set.
+2026-02-18T09:56:49,032Z DEBUG [BlackDuckProjectVersionStepRunner.java:58] No custom fields to set.
+2026-02-18T09:56:49,034Z DEBUG [IntelligentModeStepRunner.java:113] Completed project and version actions.
+2026-02-18T09:56:49,034Z DEBUG [IntelligentModeStepRunner.java:114] Processing Detect Code Locations.
+2026-02-18T09:56:50,551Z DEBUG [OperationRunner.java:635] Scan initiated with scan service. Scan ID received: e66f9056-5a60-42df-8d78-f2602b12747b
+2026-02-18T09:56:54,131Z INFO [PackageManagerStepRunner.java:64] Successfully completed package manager scan of file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/bdio/blackduck_artifact/scan.bdio
+2026-02-18T09:56:54,132Z DEBUG [IntelligentModeStepRunner.java:127] Completed Detect Code Location processing.
+2026-02-18T09:56:54,134Z INFO [StepHelper.java:62] ----------------------------------
+2026-02-18T09:56:54,135Z INFO [StepHelper.java:64] Will include the Signature Scanner tool.
+2026-02-18T09:56:54,140Z DEBUG [CreateScanBatchRunnerWithBlackDuck.java:40] Signature scanner will use the Black Duck SCA server to download/update the scanner - this is the most likely situation.
+2026-02-18T09:56:54,144Z DEBUG [CreateScanBatchRunnerWithBlackDuck.java:53] Using Tools Scan CLI download API (new).
+2026-02-18T09:56:54,145Z DEBUG [SignatureScannerLogger.java:72] The directory structure was likely created manually - be sure the jre folder exists in: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/tools
+2026-02-18T09:56:54,145Z INFO [SignatureScannerLogger.java:29] No metadata file exists, assuming this is new installation and the signature scanner should be downloaded.
+2026-02-18T09:56:57,821Z INFO [SignatureScannerLogger.java:29] Downloading the Black Duck Signature Scanner.
+2026-02-18T09:56:57,821Z INFO [SignatureScannerLogger.java:29] If the Signature Scanner on your Black Duck server has changed, the contents of /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/tools/Black_Duck_Scan_Installation may change which could involve deleting files - please do not place items in the expansion directory as this directory is assumed to be under blackduck-common control.
+2026-02-18T09:57:08,619Z DEBUG [SignatureScannerLogger.java:72] The directory structure was likely created by the installer
+2026-02-18T09:57:09,653Z INFO [SignatureScannerLogger.java:29] Black Duck Signature Scanner downloaded successfully.
+2026-02-18T09:57:09,654Z INFO [SignatureScannerLogger.java:29] The Black Duck Signature Scanner downloaded/found successfully: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/tools
+2026-02-18T09:57:09,655Z INFO [CalculateScanPathsOperation.java:68] No scan targets provided - registering the source path /Users/madhavanr/E2E/Projects/Node_Goat_e2e to scan
+2026-02-18T09:57:12,893Z INFO [SignatureScannerLogger.java:29] Starting the Black Duck Signature Scan commands.
+2026-02-18T09:57:12,895Z DEBUG [SignatureScannerLogger.java:72] The directory structure was likely created by the installer
+2026-02-18T09:57:12,896Z DEBUG [SignatureScannerLogger.java:72] Using this java installation : /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/tools/Black_Duck_Scan_Installation/scan.cli-1.0.8/jre/Contents/Home/bin/java
+2026-02-18T09:57:12,896Z DEBUG [SignatureScannerLogger.java:72] Using the Black Duck hostname : 'saastest.app.blackduck.com'
+2026-02-18T09:57:12,897Z INFO [SignatureScannerLogger.java:29] Black Duck CLI command: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/tools/Black_Duck_Scan_Installation/scan.cli-1.0.8/jre/Contents/Home/bin/java -Done-jar.silent=true -Done-jar.jar.path=/Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/tools/Black_Duck_Scan_Installation/scan.cli-1.0.8/lib/cache/scan.cli.impl-standalone.jar -Xmx4096m -jar /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/tools/Black_Duck_Scan_Installation/scan.cli-1.0.8/lib/scan.cli-1.0.8-standalone.jar --no-prompt --scheme https --host saastest.app.blackduck.com --port 443 -v --logDir /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1 --statusWriteDir /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1 --project owasp-nodejs-goat --release 1.3.0 --name Node_Goat_e2e/owasp-nodejs-goat/1.3.0 signature --exclude /.git/ --exclude /node_modules/ --exclude /.bridge/ --scass-scan /Users/madhavanr/E2E/Projects/Node_Goat_e2e
+2026-02-18T09:57:18,713Z DEBUG [SignatureScannerLogger.java:72] INFO: Start wrapper: ScanCliWrapperSettings [commandLine=[args=[Ljava.lang.String;@3081f72c, options=[Lorg.apache.commons.cli.Option;@3148f668], fileUriSet=null, scheme=https, host=saastest.app.blackduck.com, port=443]...
+2026-02-18T09:57:18,980Z DEBUG [SignatureScannerLogger.java:72] INFO: Start scan loop: ScanClientSettings [commandLine=[--no-prompt, --scheme, https, --host, saastest.app.blackduck.com, --port, 443, -v, --logDir, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1, --statusWriteDir, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1, --project, owasp-nodejs-goat, --release, 1.3.0, --name, Node_Goat_e2e/owasp-nodejs-goat/1.3.0 signature, --exclude, /.git/, --exclude, /node_modules/, --exclude, /.bridge/, --scass-scan, /Users/madhavanr/E2E/Projects/Node_Goat_e2e], fileUriSet=[file://BD-MB21526/Users/madhavanr/E2E/Projects/Node_Goat_e2e], uploadCSV=false, dryRunWriteDir=No dry run file., outputFormat=null, scanId=null, dryRunReadFile=No dry run file., fsScanReadyWaitingPeriod=30, snippetMatching=false, snippetMatchingOnly=false, snippetMatchingAllSource=false, fullSnippetScan=false, uploadSource=false, individualFileMatching=none, licenseSearch=false, copyrightSearch=false, signatureGeneration=false, noSignatureGeneration=false, maxRequestBodySize=20000000, maxUpdateSize=10000, matchConfidenceThreshold=null, minScanInterval=null, logDir=/Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1, scheme=https, host=saastest.app.blackduck.com, port=443, name=Optional[Node_Goat_e2e/owasp-nodejs-goat/1.3.0 signature], project=Optional[owasp-nodejs-goat], release=Optional[1.3.0], username=null, password=<NOT SHOWN>, correlationId=null, noPersistence=false, noPersistenceMode=null, retainUnmatchedFiles=null, projectGroupName=null, scassScan=true]...
+2026-02-18T09:57:18,981Z DEBUG [SignatureScannerLogger.java:72] INFO: Individual File Matching Detected: none...
+2026-02-18T09:57:18,981Z DEBUG [SignatureScannerLogger.java:72] INFO: Finalized sha1 white list: []...
+2026-02-18T09:57:18,981Z DEBUG [SignatureScannerLogger.java:72] INFO: Finalized clean sha1 white list: []...
+2026-02-18T09:57:19,046Z DEBUG [SignatureScannerLogger.java:72] INFO: Initialize client for saastest.app.blackduck.com:443
+2026-02-18T09:57:22,108Z DEBUG [SignatureScannerLogger.java:72] INFO: Scan engine initialized with niceness set to false
+2026-02-18T09:57:22,165Z DEBUG [SignatureScannerLogger.java:72] INFO: Dry Run path: Optional.empty
+2026-02-18T09:57:24,039Z DEBUG [SignatureScannerLogger.java:72] INFO: Saving the BDIO file to log dir for upload
+2026-02-18T09:57:24,870Z DEBUG [SignatureScannerLogger.java:72] INFO: ScanExecResult: ScanExecResult [scanClientSettings=ScanClientSettings [commandLine=[--no-prompt, --scheme, https, --host, saastest.app.blackduck.com, --port, 443, -v, --logDir, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1, --statusWriteDir, /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1, --project, owasp-nodejs-goat, --release, 1.3.0, --name, Node_Goat_e2e/owasp-nodejs-goat/1.3.0 signature, --exclude, /.git/, --exclude, /node_modules/, --exclude, /.bridge/, --scass-scan, /Users/madhavanr/E2E/Projects/Node_Goat_e2e], fileUriSet=[file://BD-MB21526/Users/madhavanr/E2E/Projects/Node_Goat_e2e], uploadCSV=false, dryRunWriteDir=No dry run file., outputFormat=null, scanId=null, dryRunReadFile=No dry run file., fsScanReadyWaitingPeriod=30, snippetMatching=false, snippetMatchingOnly=false, snippetMatchingAllSource=false, fullSnippetScan=false, uploadSource=false, individualFileMatching=none, licenseSearch=false, copyrightSearch=false, signatureGeneration=false, noSignatureGeneration=false, maxRequestBodySize=20000000, maxUpdateSize=10000, matchConfidenceThreshold=null, minScanInterval=null, logDir=/Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1, scheme=https, host=saastest.app.blackduck.com, port=443, name=Optional[Node_Goat_e2e/owasp-nodejs-goat/1.3.0 signature], project=Optional[owasp-nodejs-goat], release=Optional[1.3.0], username=null, password=<NOT SHOWN>, correlationId=null, noPersistence=false, noPersistenceMode=null, retainUnmatchedFiles=null, projectGroupName=null, scassScan=true], result=0, dataFileName=2026_02_18_15_27_226517662910984348224.tmp, scanContainer=null, sigGenScanContainer=SigGenScanContainerView{baseDir=/Users/madhavanr/E2E/Projects/Node_Goat_e2e, hostName=BD-MB21526, name=Node_Goat_e2e/owasp-nodejs-goat/1.3.0 signature, scannerVersion=1.0.8, signatureVersion=7.0.0, ownerEntityKeyToken=SN#BD-MB21526-Node_Goat_e2e, createdOn=2026-02-18T09:57:21.991Z, timeToScan=107, scanNodeList.size()=34, scanLeafList.size()=125, scanProblem=null, scanProblemList.size()=0}, fpScanContainer=null, stringSearchScanContainer=null, scanResult=ScanView{id=4a3f3231-0123-4c43-9093-d5d77cd32cb5, scannerVersion=1.0.8, signatureVersion=7.0.0, name=Node_Goat_e2e/owasp-nodejs-goat/1.3.0 signature, hostName=BD-MB21526, ownerEntityKeyToken=SN#BD-MB21526-Node_Goat_e2e, baseDir=/Users/madhavanr/E2E/Projects/Node_Goat_e2e, createdOn=2026-02-18T09:57:21.991Z, matchCount=0, numDirs=0, numNonDirFiles=0, statusMessage=file://BD-MB21526/Users/madhavanr/E2E/Projects/Node_Goat_e2e, deepSystemSize=Optional.empty, timeLastModified=0, timeToPersistMs=0, scanTime=0, arguments={}, debugMode=false}, scanSummary=ScanSummaryView{scanState=STARTED, transitionReason=TOOL_SUBMISSION, createdAt=2026-02-18T09:57:22.151Z, updatedAt=2026-02-18T09:57:23.971Z, createdByUserName=Optional[sa_centralintegrations], scanSize=Optional[3009943], serverVersion=2025.10.2, matchCount=0, directoryCount=Optional[0], fileCount=Optional[0], baseDirectory=/Users/madhavanr/E2E/Projects/Node_Goat_e2e, hostName=BD-MB21526, scanType=SIGNATURE, errorCode=Optional.empty, retainUnmatchedFiles=false, resourceMetadata=MetaDataView{href=https://saastest.app.blackduck.com/api/scan-summaries/4a3f3231-0123-4c43-9093-d5d77cd32cb5, links=[LinkView{rel=codelocation, href=https://saastest.app.blackduck.com/api/codelocations/c472c97c-5850-4bb2-b648-5e7fce8bf5c9}]}}, scanDate=Wed Feb 18 15:27:19 IST 2026, scanEndDate=Wed Feb 18 15:27:24 IST 2026, scanCreated=false, uploadUrl=https://na.store.scass.blackduck.com/1/1ac3046440dc2cd771b592617b36b2d8/91ceb1cb-534c-4aa1-ae84-b52bda5f22d5.bdio?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=prd-scass-manager%40sig-sca-prd-na.iam.gserviceaccount.com%2F20260218%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260218T095724Z&X-Goog-Expires=1800&X-Goog-SignedHeaders=host&X-Goog-Signature=62a4a1d2e48858ce5e96b8ec40de45cc1dd706502983f2a7ea320b6668a05bd53a17ecf9eea79ea9a3618603a3d8b13ad719992b91788291c8c4090acc3af2efe2707181a79e0e4a804ecc4e711c27d3288227dbc40dbcd727952e6a570c4df518ac8ceb32e93386454ab03e375c583dd2129aa744643c821f28615a1988ff09b9a4098d21d81ce2d218cc58cdcef551d61c078af4daa487698a8c548cc5da8fde01a53400ea65d2f1e5f1dbe648d80a04cbd53e23b6877eb2d17ab2981f126ddb42fd7ab92f81f306b170060b91b1df6ceb4e3d0c71e6c7931dfa265e8f1a49cb9aef4c809b121d41707cb90ffef40410305891b5047ccd3fae13afe2c37dd5, uploadUrlData=com.blackducksoftware.scan.tool.api.client.SignedUrlDataView@1ff7cf82]
+2026-02-18T09:57:24,871Z DEBUG [SignatureScannerLogger.java:72] INFO: Creating data output file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1/log/BD-MB21526-Node_Goat_e2e-2026-02-18T095721.991Z.log
+2026-02-18T09:57:24,872Z DEBUG [SignatureScannerLogger.java:72] INFO: Logging to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1/log/BD-MB21526-Node_Goat_e2e-2026-02-18T095721.991Z.log
+Logging to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1/log/BD-MB21526-Node_Goat_e2e-2026-02-18T095721.991Z.log
+2026-02-18T09:57:24,883Z DEBUG [SignatureScannerLogger.java:72] INFO: Persist scan output to file...
+2026-02-18T09:57:24,883Z DEBUG [SignatureScannerLogger.java:72] INFO: Persisted status: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1/output/scanOutput.json
+2026-02-18T09:57:24,884Z DEBUG [SignatureScannerLogger.java:72] INFO: Creating data output file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1/status/BD-MB21526-Node_Goat_e2e-2026-02-18T095721.991Z.json
+2026-02-18T09:57:24,889Z DEBUG [SignatureScannerLogger.java:72] INFO: Persist ScanSummary to file...
+2026-02-18T09:57:24,899Z DEBUG [SignatureScannerLogger.java:72] INFO: Persisted status: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1/status/BD-MB21526-Node_Goat_e2e-2026-02-18T095721.991Z.json
+2026-02-18T09:57:24,899Z INFO [SignatureScannerLogger.java:29] 
+2026-02-18T09:57:24,899Z INFO [SignatureScannerLogger.java:29] Black Duck Signature Scanner return code: 0
+2026-02-18T09:57:24,899Z INFO [SignatureScannerLogger.java:29] Signature Scanner log output directory: '/Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/scan/BlackDuckScanOutput/2026-02-18_09-57-12-892_1'
+2026-02-18T09:57:24,900Z INFO [SignatureScannerLogger.java:29] Completed the Black Duck Signature Scan commands.
+2026-02-18T09:57:27,580Z INFO [StepHelper.java:67] Signature Scanner actions finished.
+2026-02-18T09:57:27,580Z INFO [StepHelper.java:62] ----------------------------------
+2026-02-18T09:57:27,580Z INFO [StepHelper.java:64] Will include the Binary Scanner tool.
+2026-02-18T09:57:27,580Z DEBUG [IntelligentModeStepRunner.java:243] Invoking intelligent persistent binary scan.
+2026-02-18T09:57:27,581Z INFO [AbstractBinaryScanStepRunner.java:84] Binary scanner found nothing to upload.
+2026-02-18T09:57:27,581Z INFO [StepHelper.java:67] Binary Scanner actions finished.
+2026-02-18T09:57:27,581Z INFO [StepHelper.java:62] ----------------------------------
+2026-02-18T09:57:27,581Z INFO [StepHelper.java:64] Will include the Container Scanner tool.
+2026-02-18T09:57:27,581Z DEBUG [IntelligentModeStepRunner.java:270] Invoking intelligent persistent container scan.
+2026-02-18T09:57:27,581Z DEBUG [AbstractContainerScanStepRunner.java:49] Determining if configuration is valid to run a container scan.
+2026-02-18T09:57:27,581Z INFO [AbstractContainerScanStepRunner.java:51] No detect.container.scan.file.path property was provided. Skipping container scan.
+2026-02-18T09:57:27,581Z INFO [StepHelper.java:67] Container Scanner actions finished.
+2026-02-18T09:57:27,582Z INFO [StepHelper.java:62] ----------------------------------
+2026-02-18T09:57:27,582Z INFO [StepHelper.java:70] Vulnerability Impact Analysis tool will not be run.
+2026-02-18T09:57:27,582Z INFO [StepHelper.java:62] ----------------------------------
+2026-02-18T09:57:27,582Z INFO [StepHelper.java:70] IaC Scanner tool will not be run.
+2026-02-18T09:57:27,583Z INFO [IntelligentModeStepRunner.java:328] ----------------------------------
+2026-02-18T09:57:28,953Z INFO [Slf4jIntLogger.java:42] Try #1 for task BOM Scan Wait Job https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/bom-status/4a3f3231-0123-4c43-9093-d5d77cd32cb5 (elapsed: 00:00:00.000)...not done yet, waiting 1 seconds and trying again...
+2026-02-18T09:57:31,407Z INFO [Slf4jIntLogger.java:42] Try #2 for task BOM Scan Wait Job https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/bom-status/4a3f3231-0123-4c43-9093-d5d77cd32cb5 (elapsed: 00:00:02.373)...not done yet, waiting 2 seconds and trying again...
+2026-02-18T09:57:34,788Z INFO [Slf4jIntLogger.java:42] Try #3 for task BOM Scan Wait Job https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/bom-status/4a3f3231-0123-4c43-9093-d5d77cd32cb5 (elapsed: 00:00:05.827)...not done yet, waiting 3 seconds and trying again...
+2026-02-18T09:57:39,191Z INFO [Slf4jIntLogger.java:42] Try #4 for task BOM Scan Wait Job https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/bom-status/4a3f3231-0123-4c43-9093-d5d77cd32cb5 (elapsed: 00:00:10.208)...not done yet, waiting 5 seconds and trying again...
+2026-02-18T09:57:45,643Z INFO [Slf4jIntLogger.java:42] Try #5 for task BOM Scan Wait Job https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/bom-status/4a3f3231-0123-4c43-9093-d5d77cd32cb5 (elapsed: 00:00:16.609)...not done yet, waiting 5 seconds and trying again...
+2026-02-18T09:57:52,196Z INFO [Slf4jIntLogger.java:42] Try #6 for task BOM Scan Wait Job https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/bom-status/4a3f3231-0123-4c43-9093-d5d77cd32cb5 (elapsed: 00:00:23.063)...complete!
+2026-02-18T09:57:53,526Z INFO [Slf4jIntLogger.java:42] Try #1 for task BOM Scan Wait Job https://saastest.app.blackduck.com/api/projects/8b74a22e-a24b-43a3-8077-a6008fac2535/versions/5d5bee44-db0a-49d9-a70a-bbf20fced3dc/bom-status/e66f9056-5a60-42df-8d78-f2602b12747b (elapsed: 00:00:00.000)...complete!
+2026-02-18T09:57:53,528Z INFO [IntelligentModeStepRunner.java:365] Checking to see if Detect should check policy for violations.
+2026-02-18T09:57:54,962Z DEBUG [Slf4jIntLogger.java:77] Starting phone home
+2026-02-18T09:57:54,963Z INFO [Application.java:188] 
+2026-02-18T09:57:54,964Z INFO [Application.java:258] 
+2026-02-18T09:57:54,964Z INFO [Application.java:261] Creating status file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-56-32-498/status/status.json
+2026-02-18T09:57:54,965Z DEBUG [Slf4jIntLogger.java:77] Phoning home to https://www.google-analytics.com/mp/collect?api_secret=LA7cz8EKSLCmHdHdVdThGA&measurement_id=G-J4L8680QKM
+2026-02-18T09:57:54,968Z INFO [Application.java:279] 
+2026-02-18T09:57:54,969Z DEBUG [Application.java:298] Detect shutdown begin.
+2026-02-18T09:57:54,969Z INFO [DiagnosticSystem.java:83] Finishing diagnostic mode.
+2026-02-18T09:57:54,969Z INFO [DiagnosticSystem.java:86] Finishing reports.
+2026-02-18T09:57:54,970Z INFO [DiagnosticSystem.java:93] Finishing logging.

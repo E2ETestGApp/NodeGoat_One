@@ -1,0 +1,44 @@
+2026-02-18 15:25:36 IST INFO  [main] --- Writing sysout to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-55-36-154/logs/sysout.txt
+2026-02-18 15:25:36 IST INFO  [main] --- Attempting to set 'com.blackduck.integration' logging level.
+2026-02-18 15:25:36 IST INFO  [main] --- Attempting to capture additional log messages to files.
+2026-02-18 15:25:36 IST INFO  [main] --- Redirected to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-55-36-154/logs/all.txt
+2026-02-18 15:25:36 IST INFO  [main] --- Redirected to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-55-36-154/logs/debug.txt
+2026-02-18 15:25:36 IST INFO  [main] --- Redirected to file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-55-36-154/logs/info.txt
+2026-02-18 15:25:36 IST INFO  [main] --- Attempting to restrict console to debug level (additional levels written to files).
+2026-02-18 15:25:36 IST INFO  [main] --- Adding additional log listeners to extractions.
+2026-02-18 15:25:36 IST INFO  [main] --- Diagnostics is now in control of logging!
+2026-02-18 15:25:36 IST INFO  [main] --- Creating configuration diagnostics reports.
+2026-02-18 15:25:36 IST INFO  [main] --- Diagnostics system is ready.
+2026-02-18 15:25:36 IST DEBUG [main] --- Main boot completed. Deciding what Detect should do.
+2026-02-18 15:25:36 IST INFO  [main] --- 
+2026-02-18 15:25:36 IST DEBUG [main] --- Black Duck SCA will run ONLINE: A Black Duck SCA url was found.
+2026-02-18 15:25:36 IST DEBUG [main] --- Decided what products will be run. Starting product boot.
+2026-02-18 15:25:36 IST DEBUG [main] --- Detect product boot start.
+2026-02-18 15:25:36 IST DEBUG [main] --- Will boot Black Duck SCA product.
+2026-02-18 15:25:36 IST DEBUG [main] --- Detect will check communication with the Black Duck SCA server.
+2026-02-18 15:25:36 IST TRACE [main] --- InternalRequest : POST https://saastest.app.blackduck.com/api/tokens/authenticate HTTP/1.1
+2026-02-18 15:25:36 IST TRACE [main] --- InternalRequest headers : 
+2026-02-18 15:25:36 IST TRACE [main] --- Header Authorization : ************************
+2026-02-18 15:25:36 IST TRACE [main] --- Header Content-Length : 0
+2026-02-18 15:25:37 IST TRACE [main] --- HttpResponseProxy : HttpResponseProxy{HTTP/1.1 403 Forbidden [Date: Wed, 18 Feb 2026 09:55:37 GMT, Content-Type: text/html, Transfer-Encoding: chunked, Connection: keep-alive, Strict-Transport-Security: max-age=31536000; includeSubDomains, cf-cache-status: DYNAMIC, Server: cloudflare, CF-RAY: 9cfca65d9c137fdb-MAA] org.apache.http.client.entity.DecompressingEntity@106faf11}
+2026-02-18 15:25:37 IST TRACE [main] --- HttpResponseProxy headers : 
+2026-02-18 15:25:37 IST TRACE [main] --- Header Date : Wed, 18 Feb 2026 09:55:37 GMT
+2026-02-18 15:25:37 IST TRACE [main] --- Header Content-Type : text/html
+2026-02-18 15:25:37 IST TRACE [main] --- Header Transfer-Encoding : chunked
+2026-02-18 15:25:37 IST TRACE [main] --- Header Connection : keep-alive
+2026-02-18 15:25:37 IST TRACE [main] --- Header Strict-Transport-Security : max-age=31536000; includeSubDomains
+2026-02-18 15:25:37 IST TRACE [main] --- Header cf-cache-status : DYNAMIC
+2026-02-18 15:25:37 IST TRACE [main] --- Header Server : cloudflare
+2026-02-18 15:25:37 IST TRACE [main] --- Header CF-RAY : 9cfca65d9c137fdb-MAA
+2026-02-18 15:25:37 IST ERROR [main] --- The connection was not successful for an unknown reason. If an api token is being used, it could be incorrect.
+2026-02-18 15:25:37 IST ERROR [main] --- Failed to connect to the Black Duck SCA server
+2026-02-18 15:25:37 IST DEBUG [main] --- Detect boot completed.
+2026-02-18 15:25:37 IST DEBUG [main] --- Detect will NOT attempt to run.
+2026-02-18 15:25:37 IST INFO  [main] --- 
+2026-02-18 15:25:37 IST INFO  [main] --- 
+2026-02-18 15:25:37 IST INFO  [main] --- Creating status file: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_detect_execution/detect/runs/2026-02-18-09-55-36-154/status/status.json
+2026-02-18 15:25:37 IST INFO  [main] --- 
+2026-02-18 15:25:37 IST DEBUG [main] --- Detect shutdown begin.
+2026-02-18 15:25:37 IST INFO  [main] --- Finishing diagnostic mode.
+2026-02-18 15:25:37 IST INFO  [main] --- Finishing reports.
+2026-02-18 15:25:37 IST INFO  [main] --- Finishing logging.

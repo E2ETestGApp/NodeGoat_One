@@ -1,0 +1,7 @@
+------------------------------------------------------------------------------------------------------
+
+Report: Detector Report
+Run id: 2026-02-18-09-55-36-154
+A breakdown of detector's that were applicableChildren and their preparation and extraction results.
+
+------------------------------------------------------------------------------------------------------

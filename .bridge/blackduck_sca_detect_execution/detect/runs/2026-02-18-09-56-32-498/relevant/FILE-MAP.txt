@@ -1,0 +1,2 @@
+0: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package-lock.json
+1: /Users/madhavanr/E2E/Projects/Node_Goat_e2e/package.json

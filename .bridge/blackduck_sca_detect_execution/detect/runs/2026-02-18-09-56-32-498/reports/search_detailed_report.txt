@@ -1,0 +1,49 @@
+------------------------------------------------------------------------------------------------------
+
+Report: Search DetectResult Report
+Run id: 2026-02-18-09-56-32-498
+A breakdown of detector searching by directory.
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Detailed search results for directory
+/Users/madhavanr/E2E/Projects/Node_Goat_e2e
+------------------------------------------------------------------------------------------------------
+ EXTRACTED: GIT - Git
+ EXTRACTED: NPM - NPM Package Lock
+ NOT FOUND: BITBAKE - [Bitbake CLI: The properties are insufficient to run. Bitbake requires that at least one package name is provided.]
+ NOT FOUND: CARGO - [Cargo CLI: No file was found with pattern: Cargo.toml, Cargo Lock: No files were found with any of the patterns: Cargo.lock,Cargo.toml]
+ NOT FOUND: CARTHAGE - [Carthage Lock: No files were found with any of the patterns: Cartfile,Cartfile.resolved]
+ NOT FOUND: CLANG - [Clang CLI: No file was found with pattern: compile_commands.json]
+ NOT FOUND: COCOAPODS - [Pod Lock: No file was found with pattern: Podfile.lock]
+ NOT FOUND: CONAN - [Conan 2 CLI: No file was found with pattern: conanfile.txt, Conan Lock: No file was found with pattern: conan.lock, Conan 1 CLI: No file was found with pattern: conanfile.txt]
+ NOT FOUND: CONDA - [Conda CLI: No file was found with pattern: environment.yml]
+ NOT FOUND: CPAN - [Cpan CLI: No file was found with pattern: Makefile.PL]
+ NOT FOUND: CRAN - [Packrat Lock: No file was found with pattern: packrat.lock]
+ NOT FOUND: DART - [Dart CLI: No files were found with any of the patterns: pubspec.lock,pubspec.yaml, Dart PubSpec Lock: No files were found with any of the patterns: pubspec.yaml,pubspec.lock]
+ NOT FOUND: GO_DEP - [GoDep Lock: No files were found with any of the patterns: Gopkg.lock,Gopkg.toml]
+ NOT FOUND: GO_GRADLE - [GoGradle Lock: No file was found with pattern: gogradle.lock]
+ NOT FOUND: GO_MOD - [GoMod CLI: No file was found with pattern: go.mod, Go Mod File: No file was found with pattern: go.mod]
+ NOT FOUND: GO_VENDOR - [Go Vendor: No file was found with pattern: vendor]
+ NOT FOUND: GO_VNDR - [GoVndr CLI: No file was found with pattern: vendor.conf]
+ NOT FOUND: GRADLE - [Gradle Native Inspector: No files were found with any of the patterns: build.gradle,build.gradle.kts,settings.gradle,settings.gradle.kts]
+ NOT FOUND: HEX - [Rebar CLI: No file was found with pattern: rebar.config]
+ NOT FOUND: IVY - [Ivy Build Parse: No file was found with pattern: ivy.xml]
+ NOT FOUND: LERNA - [Lerna CLI: No file was found with pattern: lerna.json]
+ NOT FOUND: MAVEN - [Maven CLI: No file was found with pattern: *pom.xml, Maven Wrapper CLI: No file was found with pattern: pom.groovy]
+ NOT FOUND: NUGET - [NuGet Solution Native Inspector: No files were found with any of the patterns: *.sln, NuGet Project Native Inspector: No files were found with any of the patterns: *.csproj,*.fsproj,*.vbproj,*.asaproj,*.dcproj,*.shproj,*.ccproj,*.sfproj,*.njsproj,*.vcxproj,*.vcproj,*.xproj,*.pyproj,*.hiveproj,*.pigproj,*.jsproj,*.usqlproj,*.deployproj,*.msbuildproj,*.sqlproj,*.dbproj,*.rproj]
+ NOT FOUND: OPAM - [Opam CLI: No file was found with pattern: *.opam, Opam Lock: No file was found with pattern: *.opam.locked]
+ NOT FOUND: PACKAGIST - [Composer Lock: No file was found with pattern: composer.lock]
+ NOT FOUND: PEAR - [Pear CLI: No file was found with pattern: package.xml]
+ NOT FOUND: PIP - [Pipenv CLI: No files were found with any of the patterns: Pipfile,Pipfile.lock, PIP Native Inspector: No files were found with any of the patterns: setup.py,requirements.txt,pyproject.toml, Pipfile Lock: No files were found with any of the patterns: Pipfile,Pipfile.lock, PIP Requirements File Parse: No files were found with any of the patterns: requirements.txt]
+ NOT FOUND: PNPM - [Pnpm Lock: No file was found with pattern: pnpm-lock.yaml]
+ NOT FOUND: POETRY - [Poetry Lock: No files were found with any of the patterns: pyproject.toml,poetry.lock]
+ NOT FOUND: RUBYGEMS - [Gemfile Lock: No file was found with pattern: Gemfile.lock, Gemspec Parse: No file was found with pattern: *.gemspec]
+ NOT FOUND: RUSH - [Rush Lock: No file was found with pattern: rush.json]
+ NOT FOUND: SBT - [Sbt Native Inspector: No file was found with pattern: build.sbt]
+ NOT FOUND: SETUPTOOLS - [Setuptools CLI: No file was found with pattern: pyproject.toml, Setuptools Parse: No file was found with pattern: pyproject.toml]
+ NOT FOUND: SWIFT - [Swift Lock: No files were found with any of the patterns: Package.swift,Package.resolved, Swift CLI: No file was found with pattern: Package.swift]
+ NOT FOUND: UV - [UV CLI: No file was found with pattern: pyproject.toml, UV Lock: No file was found with pattern: pyproject.toml]
+ NOT FOUND: XCODE - [Xcode Workspace Lock: No file was found with pattern: *.xcworkspace, Xcode Project Lock: No file was found with pattern: *.xcodeproj]
+ NOT FOUND: YARN - [Yarn Lock: No file was found with pattern: yarn.lock]
+------------------------------------------------------------------------------------------------------
