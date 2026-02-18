@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4  # Use the checkout action to clone the repo
       - name: Black Duck SCA Full Scan  # Step for running a full Black Duck scan
         id: black-duck-full-scan  # Unique ID for this step
-        uses: blackduck-inc/black-duck-security-scan@v2.7.1  # Use the Black Duck security scan action
+        uses: blackduck-inc/black-duck-security-scan@v2.6.0  # Use the Black Duck security scan action
         #uses: blackduck-inc/black-duck-security-scan@SIGINT-3342
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}  # Set project name based on repo name
