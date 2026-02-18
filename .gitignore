@@ -29,3 +29,4 @@ test/e2e/videos/
 
 # ignore Snyk Code scanner files
 .dccache
+.bridge/
