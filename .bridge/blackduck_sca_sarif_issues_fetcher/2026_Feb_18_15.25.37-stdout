@@ -1,2 +1,0 @@
-/Users/madhavanr/E2E/Epic/INTDELIVER-557-GithubIssue/Bridge/bridge-cli-bundle-4.0.0rc5-macos_arm/adapters/blackduck-sca-sarif-issues-fetcher/versions/0.1.189/blackduck-sca-sarif-issues-fetcher /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/blackduck_sca_sarif_issues_fetcher/data.json
-{"level":"error","logger":"Blackduck SCA SARIF Issues Fetcher","msg":"There is no detect scan to gather results from","time":"2026-02-18 15:25:37.3700 IST"}

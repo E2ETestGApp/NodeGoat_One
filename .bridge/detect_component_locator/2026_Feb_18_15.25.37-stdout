@@ -1,2 +1,0 @@
-/Users/madhavanr/E2E/Epic/INTDELIVER-557-GithubIssue/Bridge/bridge-cli-bundle-4.0.0rc5-macos_arm/adapters/detect-component-locator/versions/0.1.122/detect-component-locator /Users/madhavanr/E2E/Projects/Node_Goat_e2e/.bridge/detect_component_locator/data.json
-{"level":"info","logger":"Detect Component Locator","msg":"skipping fix pull requests creation as \"blackducksca.fixpr.enabled\" is configured to false","time":"2026-02-18 15:25:37.4409 IST"}
