@@ -7,16 +7,16 @@ on:
   workflow_dispatch:
 jobs:
   build:  # Define a job named 'build'
-    #runs-on: [self-hosted]  # Self Hosted Runner mac
+    runs-on: [self-hosted]  # Self Hosted Runner mac
     #runs-on: [self-hosted,linux, docker]  # Self Hosted Runner docker linux
     #runs-on: [ubuntu-latest]
-    runs-on: [windows-latest]
+    #runs-on: [windows-latest]
     steps:  # List of steps to execute in this job
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Polaris Full Scan  # Step for running a full CNC Scan
         #uses: blackduck-inc/black-duck-security-scan@v2.7.1  # Use the Black Duck security scan action
-        uses: blackduck-inc/black-duck-security-scan@v2.7.1
+        uses: blackduck-inc/black-duck-security-scan@main
         #uses: blackduck-inc/black-duck-security-scan@latest
         with:
            detect_args: '--detect.diagnostic=true'
@@ -24,9 +24,10 @@ jobs:
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
            polaris_assessment_types: "SAST,SCA"
            #coverity_version: "2025.12.0"
+           polaris_externalIssues_create: true
         
           
-           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
+           bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.0.0rc4/bridge-cli-bundle-4.0.0rc4-macos_arm.zip
           
            #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
            #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
