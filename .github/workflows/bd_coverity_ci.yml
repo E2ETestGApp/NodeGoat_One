@@ -34,7 +34,7 @@ jobs:
           #coverity_project_name: "MDN_Local_Coverity_Aug25_SCAN1"
           #coverity_stream_name:  "MDN_Local_Coverity_Aug25_SCAN1"
           #coverity_local: true
-          coverity_waitforscan: false
+          coverity_waitforscan: true
          ### POLICY ENFORCEMENT: Uncomment to break build on policy
           coverity_policy_view: 'Outstanding Issues' 
 
