@@ -24,6 +24,11 @@ jobs:
            # HTTPS_PROXY: ${{ secrets.PROXY }}
            
         with:
+          blackducksca_externalIssues_create: true
+          #blackducksca_externalIssues_severities: "critical,high,medium"
+          #blackducksca_externalIssues_groupSCAIssues: true
+          #blackducksca_externalIssues_maxCount: 3
+    
           detect_install_directory: '/Users/madhavanr/bd-detect'  # Specify the installation directory for Black Duck Detect 
           detect_args: '--detect.diagnostic=true'
           #detect_args: '--detect.diagnostic=true'
@@ -42,8 +47,8 @@ jobs:
           blackducksca_fixpr_enabled: true
           blackducksca_fixpr_maxCount: 2
           
-          blackducksca_fixpr_filter_severities: 'CRITICAL,HIGH'
-          blackducksca_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
+          #blackducksca_fixpr_filter_severities: 'CRITICAL,HIGH'
+          #blackducksca_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
           github_token: ${{ secrets.BD_GITHUB_TOKEN }}  # GitHub token for authentication when posting comment
           blackducksca_prComment_enabled: true  # Enable automatic PR comments based on scan results
           #github_token: ${{ secrets.BD_GITHUB_TOKEN }}  # GitHub token for authentication when posting comments
