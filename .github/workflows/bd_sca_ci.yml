@@ -25,9 +25,9 @@ jobs:
            
         with:
           blackducksca_externalIssues_create: true
-          #blackducksca_externalIssues_severities: "critical,high,medium"
-          #blackducksca_externalIssues_groupSCAIssues: true
-          #blackducksca_externalIssues_maxCount: 3
+          blackducksca_externalIssues_severities: "critical"
+          blackducksca_externalIssues_groupSCAIssues: true
+          blackducksca_externalIssues_maxCount: 5
     
           detect_install_directory: '/Users/madhavanr/bd-detect'  # Specify the installation directory for Black Duck Detect 
           detect_args: '--detect.diagnostic=true'
@@ -42,7 +42,7 @@ jobs:
           #blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
           blackducksca_waitForScan: true
           blackducksca_reports_sarif_create: true
-          blackducksca_reports_sarif_severities: 'LOW,MEDIUM'
+          blackducksca_reports_sarif_severities: 'LOW'
           #blackducksca_upload_sarif_report: true
           #Fix PR Config
           #blackducksca_fixpr_enabled: true
