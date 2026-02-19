@@ -25,7 +25,7 @@ jobs:
            
         with:
           blackducksca_externalIssues_create: true
-          blackducksca_externalIssues_severities: "critical"
+          blackducksca_externalIssues_severities: "High"
           blackducksca_externalIssues_groupSCAIssues: false
           blackducksca_externalIssues_maxCount: 5
     
