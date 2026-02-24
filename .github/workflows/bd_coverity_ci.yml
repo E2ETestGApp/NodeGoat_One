@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Source  # Step to check out the repository code
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Black Duck Coverity Scan  # Step for running a full CNC Scan
-        uses: blackduck-inc/black-duck-security-scan@v2
+        uses: blackduck-inc/black-duck-security-scan@v2.8.0
         #uses: blackduck-inc/black-duck-security-scan@v2
         
         with:
@@ -34,7 +34,7 @@ jobs:
           #coverity_project_name: "MDN_Local_Coverity_Aug25_SCAN1"
           #coverity_stream_name:  "MDN_Local_Coverity_Aug25_SCAN1"
           #coverity_local: true
-          coverity_waitforscan: false
+          coverity_waitforscan: true
          ### POLICY ENFORCEMENT: Uncomment to break build on policy
           coverity_policy_view: 'Outstanding Issues' 
 
