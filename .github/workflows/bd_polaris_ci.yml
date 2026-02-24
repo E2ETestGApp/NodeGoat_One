@@ -22,15 +22,15 @@ jobs:
            detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
-           polaris_assessment_types: "SAST,SCA"
+           polaris_assessment_types: "SAST"
            #coverity_version: "2025.12.0"
            
            #Github Issue Related
           
            polaris_externalIssues_create: true
            polaris_externalIssues_types: "SCA,SAST"
-           polaris_externalIssues_severities: "critical"
-           polaris_externalIssues_groupSCAIssues: fasle
+           polaris_externalIssues_severities: "critical,high"
+           polaris_externalIssues_groupSCAIssues: true
            polaris_externalIssues_maxCount: 5
            polaris_branch_name: "master"
         
