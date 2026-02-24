@@ -22,16 +22,16 @@ jobs:
            detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
-           polaris_assessment_types: "SCA,SAST"
+           polaris_assessment_types: "SCA"
            #coverity_version: "2025.12.0"
            
            #Github Issue Related
           
            polaris_externalIssues_create: true
-           polaris_externalIssues_types: "SCA,SAST"
-           polaris_externalIssues_severities: "medium"
+           polaris_externalIssues_types: "SAST"
+           #polaris_externalIssues_severities: "medium"
            polaris_externalIssues_groupSCAIssues: true
-           polaris_externalIssues_maxCount: -5
+           polaris_externalIssues_maxCount: 5
            polaris_branch_name: "master"
         
           
@@ -58,7 +58,7 @@ jobs:
           #polaris_assessment_types: "SAST"
           
           #Test Location - new resource
-           polaris_test_sast_location: local
+           #polaris_test_sast_location: local
            #polaris_test_sca_location: hybrid
            #polaris_waitForScan: false
           
@@ -95,7 +95,7 @@ jobs:
            github_token: ${{ secrets.BD_GITHUB_TOKEN }}
                 ### Mark build status if policy violating issues are found
         # Rapid Scans
-           polaris_test_sast_Type: 'SAST_RAPID'   
+           #polaris_test_sast_Type: 'SAST_RAPID'   
            #polaris_test_sast_Type: 'SAST_FULL'      
            mark_build_status: 'success'
 
