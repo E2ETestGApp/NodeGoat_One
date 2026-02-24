@@ -28,10 +28,10 @@ jobs:
            #Github Issue Related
           
            polaris_externalIssues_create: true
-           #polaris_externalIssues_types: "SCA,SAST"
-           #polaris_externalIssues_severities: "critical,high"
-           #polaris_externalIssues_groupSCAIssues: true
-           #polaris_externalIssues_maxCount: 5
+           polaris_externalIssues_types: "SCA,SAST"
+           polaris_externalIssues_severities: "medium,low"
+           polaris_externalIssues_groupSCAIssues: false
+           polaris_externalIssues_maxCount: 5
            polaris_branch_name: "master"
         
           
@@ -58,7 +58,7 @@ jobs:
           #polaris_assessment_types: "SAST"
           
           #Test Location - new resource
-           #polaris_test_sast_location: local
+           polaris_test_sast_location: local
            #polaris_test_sca_location: hybrid
            #polaris_waitForScan: false
           
