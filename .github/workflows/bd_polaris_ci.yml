@@ -31,7 +31,7 @@ jobs:
            #polaris_externalIssues_types: "SCA,SAST"
            #polaris_externalIssues_severities: "medium"
            #polaris_externalIssues_groupSCAIssues: true
-           polaris_externalIssues_maxCount: 5
+           polaris_externalIssues_maxCount: 6
            #polaris_branch_name: "master"
         
           
