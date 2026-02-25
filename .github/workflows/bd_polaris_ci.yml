@@ -90,7 +90,7 @@ jobs:
         # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when polaris_upload_sarif_report is set as true
 
  ### Below configuration is used to enable feedback from Polaris security testing as pull request comment
-           #polaris_prComment_enabled: true
+           polaris_prComment_enabled: true
            github_token: ${{ secrets.BD_GITHUB_TOKEN }}
                 ### Mark build status if policy violating issues are found
         # Rapid Scans
