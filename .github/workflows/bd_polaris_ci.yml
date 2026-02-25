@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Polaris Full Scan  # Step for running a full CNC Scan
         #uses: blackduck-inc/black-duck-security-scan@v2.7.1  # Use the Black Duck security scan action
-        uses: blackduck-inc/black-duck-security-scan@fix-pipeline-issue
+        uses: blackduck-inc/black-duck-security-scan@v2.8.0
         #uses: blackduck-inc/black-duck-security-scan@latest
         with:
            detect_args: '--detect.diagnostic=true'
@@ -81,16 +81,16 @@ jobs:
           # project_source_preserveSymLinks: true
     
         ### SARIF report generation and upload to GitHub Adavanced Security Tab: Uncomment below to enable
-           polaris_reports_sarif_create: true  
-           polaris_reports_sarif_groupSCAIssues: true
-           polaris_reports_sarif_issue_types: 'SCA,SAST'
+           #polaris_reports_sarif_create: true  
+           #polaris_reports_sarif_groupSCAIssues: true
+           #polaris_reports_sarif_issue_types: 'SCA,SAST'
           #polaris_reports_sarif_file_path: '/Users/madhavanr/GitHubTest_E2E/sarif_Path/Polris_Sarif_Reports.json' # File path (including file name) where SARIF report is created.
            #polaris_reports_sarif_severities: "CRITICAL,HIGH"
            #polaris_upload_sarif_report: true 
         # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when polaris_upload_sarif_report is set as true
 
  ### Below configuration is used to enable feedback from Polaris security testing as pull request comment
-           polaris_prComment_enabled: true
+           #polaris_prComment_enabled: true
            github_token: ${{ secrets.BD_GITHUB_TOKEN }}
                 ### Mark build status if policy violating issues are found
         # Rapid Scans
