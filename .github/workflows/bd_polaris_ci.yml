@@ -19,7 +19,7 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2.8.0
         #uses: blackduck-inc/black-duck-security-scan@latest
         with:
-           detect_args: '--detect.diagnostic=true'
+           #detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
            polaris_assessment_types: "SAST,SCA"
@@ -31,7 +31,7 @@ jobs:
            #polaris_externalIssues_types: "SCA,SAST"
            #polaris_externalIssues_severities: "medium"
            #polaris_externalIssues_groupSCAIssues: true
-           #polaris_externalIssues_maxCount: 5
+           polaris_externalIssues_maxCount: 5
            #polaris_branch_name: "master"
         
           
@@ -63,7 +63,7 @@ jobs:
            #polaris_waitForScan: false
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
-           #include_diagnostics: true
+           include_diagnostics: true
 
          ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
