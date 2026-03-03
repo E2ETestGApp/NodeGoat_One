@@ -26,9 +26,9 @@ jobs:
            
         with:
           blackducksca_externalIssues_create: true
-          blackducksca_externalIssues_severities: "Low"
-          blackducksca_externalIssues_groupSCAIssues: false
-          blackducksca_externalIssues_maxCount: 5
+          #blackducksca_externalIssues_severities: "Low"
+          #blackducksca_externalIssues_groupSCAIssues: false
+          #blackducksca_externalIssues_maxCount: 5
   
           detect_install_directory: '/Users/madhavanr/bd-detect'  # Specify the installation directory for Black Duck Detect 
           detect_args: '--detect.diagnostic=true'
