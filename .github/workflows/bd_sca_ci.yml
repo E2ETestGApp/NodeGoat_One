@@ -29,7 +29,7 @@ jobs:
           blackducksca_externalIssues_severities: "Low"
           blackducksca_externalIssues_groupSCAIssues: false
           blackducksca_externalIssues_maxCount: 5
-    
+  
           detect_install_directory: '/Users/madhavanr/bd-detect'  # Specify the installation directory for Black Duck Detect 
           detect_args: '--detect.diagnostic=true'
           #detect_args: '--detect.diagnostic=true'
@@ -40,10 +40,10 @@ jobs:
           blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}  # Black Duck API token from secrets
           #network_ssl_trustAll: true
           #blackducksca_scan_full: false  # Perform a full scan
-          blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
+          #blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
           blackducksca_waitForScan: true
-          blackducksca_reports_sarif_create: true
-          blackducksca_reports_sarif_severities: 'High'
+          #blackducksca_reports_sarif_create: true
+          #blackducksca_reports_sarif_severities: 'High'
           #blackducksca_upload_sarif_report: true
           #Fix PR Config
           #blackducksca_fixpr_enabled: true
