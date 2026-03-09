@@ -26,7 +26,7 @@ jobs:
           #coverity_install_directory: "/Users/madhavanr/E2E/testpath"
           #coverity_project_name: "MDN_Coverity_CNC_2026"
           #coverity_stream_name:  "MDN_Coverity_CNC_2026"
-          detect_args: '--detect.diagnostic=true'
+          #detect_args: '--detect.diagnostic=true'
         #  #Coverity Classic /Local 
           #coverity_url: ${{ secrets.COVERITY_CLASSIC_URL }}
           #coverity_user: ${{ secrets.COVERITY_CLASSIC_USER }}
@@ -37,6 +37,8 @@ jobs:
           coverity_waitforscan: true
          ### POLICY ENFORCEMENT: Uncomment to break build on policy
           coverity_policy_view: 'Outstanding Issues' 
+          coverity_prComment_impacts: 'High,Medium,Low,Audit'
+          include_diagnostics: true 
 
         ### PULL REQUEST COMMENTS:
           coverity_prComment_enabled: true
