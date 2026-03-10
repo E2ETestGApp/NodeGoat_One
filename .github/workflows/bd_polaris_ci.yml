@@ -29,14 +29,13 @@ jobs:
           
            polaris_externalIssues_create: true
            #polaris_externalIssues_types: "SCA,SAST"
-           polaris_externalIssues_severities: "medium"
+           #polaris_externalIssues_severities: "medium"
            #polaris_externalIssues_groupSCAIssues: true
-           polaris_externalIssues_maxCount: 5
+           #polaris_externalIssues_maxCount: 5
            #polaris_branch_name: "master"
         
           
            #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
-          
            #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
            #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
            #polaris_server_url: ${{ secrets.POLARIS_CDEV_SERVER_URL }}
@@ -81,7 +80,7 @@ jobs:
           # project_source_preserveSymLinks: true
     
         ### SARIF report generation and upload to GitHub Adavanced Security Tab: Uncomment below to enable
-           #polaris_reports_sarif_create: true  
+           polaris_reports_sarif_create: true  
            #polaris_reports_sarif_groupSCAIssues: true
            #polaris_reports_sarif_issue_types: 'SCA,SAST'
           #polaris_reports_sarif_file_path: '/Users/madhavanr/GitHubTest_E2E/sarif_Path/Polris_Sarif_Reports.json' # File path (including file name) where SARIF report is created.
