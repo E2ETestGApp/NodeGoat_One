@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4 # Use the checkout action to clone the repo
       - name: Polaris Full Scan  # Step for running a full CNC Scan
         #uses: blackduck-inc/black-duck-security-scan@v2.7.1  # Use the Black Duck security scan action
-        uses: blackduck-inc/black-duck-security-scan@v2.8.0
+        uses: blackduck-inc/black-duck-security-scan@latest
         #uses: blackduck-inc/black-duck-security-scan@latest
         with:
            #detect_args: '--detect.diagnostic=true'
@@ -27,10 +27,10 @@ jobs:
            
            #Github Issue Related
           
-           #polaris_externalIssues_create: true
-           polaris_externalIssues_types: "SCA,SAST"
+           polaris_externalIssues_create: true
+          #polaris_externalIssues_types: "SCA,SAST"
            polaris_externalIssues_severities: "medium"
-           #polaris_externalIssues_groupSCAIssues: true
+           polaris_externalIssues_groupSCAIssues: false
            polaris_externalIssues_maxCount: 5
            #polaris_branch_name: "master"
         
