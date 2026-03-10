@@ -28,10 +28,10 @@ jobs:
            #Github Issue Related
           
            polaris_externalIssues_create: true
-           #polaris_externalIssues_types: "SCA,SAST"
-           #polaris_externalIssues_severities: "medium"
+           polaris_externalIssues_types: "SCA,SAST"
+           polaris_externalIssues_severities: "medium"
            #polaris_externalIssues_groupSCAIssues: true
-           #polaris_externalIssues_maxCount: 5
+           polaris_externalIssues_maxCount: 5
            #polaris_branch_name: "master"
         
            #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
