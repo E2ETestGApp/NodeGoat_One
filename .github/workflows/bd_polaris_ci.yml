@@ -34,7 +34,6 @@ jobs:
            #polaris_externalIssues_maxCount: 5
            #polaris_branch_name: "master"
         
-          
            #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
            #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
            #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
