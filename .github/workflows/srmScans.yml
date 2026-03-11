@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
       - name: SRM Scan
         #uses: blackduck-inc/black-duck-security-scan@v2
-        uses: blackduck-inc/black-duck-security-scan@v2.8.0
+        uses: blackduck-inc/black-duck-security-scan@v2
         with:
           ### SCANNING: Required fields
           #bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.0.0rc5/bridge-cli-bundle-4.0.0rc5-macos_arm.zip"
