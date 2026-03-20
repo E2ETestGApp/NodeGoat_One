@@ -54,7 +54,7 @@ jobs:
            polaris_assessment_types: "SAST"
            #polaris_assessment_types: "SCA"
           #polaris_assessment_types: "SAST"
-          
+      
           #Test Location - new resource
            #polaris_test_sast_location: local
            #polaris_test_sca_location: hybrid
