@@ -22,7 +22,7 @@ jobs:
            #detect_args: '--detect.diagnostic=true'
            polaris_server_url: ${{secrets.POLARIS_SERVER_URL}}
            polaris_access_token: ${{secrets.POLARIS_ACCESS_TOKEN}}
-           polaris_assessment_types: "SAST,SCA"
+           #polaris_assessment_types: "SAST,SCA"
            #coverity_version: "2025.12.0"
            
            #Github Issue Related
