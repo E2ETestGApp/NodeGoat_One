@@ -86,7 +86,6 @@ jobs:
            #polaris_reports_sarif_severities: "CRITICAL,HIGH"
            #polaris_upload_sarif_report: true 
         # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when polaris_upload_sarif_report is set as true
-
  ### Below configuration is used to enable feedback from Polaris security testing as pull request comment
            polaris_prComment_enabled: true
            github_token: ${{ secrets.BD_GITHUB_TOKEN }}
