@@ -28,7 +28,10 @@
     "marked": "0.3.5",
     "is-my-json-valid": "2.19.0",
     "mongoose": "6.0.11",
-    "cryptiles": "0.2.2"
+    "cryptiles": "0.2.2",
+     "jsonwebtoken":"8.5.1",
+    "axios": "1.11.0"
+
 
   },
   "comments": {
