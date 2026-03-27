@@ -56,13 +56,13 @@ jobs:
           #polaris_assessment_types: "SAST"
       
           #Test Location - new resource
-          #polaris_test_sast_location: remote
-           #polaris_test_sca_location: hybrid
-           polaris_waitForScan: false
+          polaris_test_sast_location: Local
+           #polaris_test_sca_location: Remote
+           polaris_waitForScan: true
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
            include_diagnostics: true
-           polaris_fixpr_enabled: true
+           #polaris_fixpr_enabled: true
 
          ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
