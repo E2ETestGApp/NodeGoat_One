@@ -16,7 +16,7 @@ jobs:
         #uses: blackduck-inc/black-duck-security-scan@v2.8.0
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
-          #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.1.0rc7/bridge-cli-bundle-4.1.0rc7-macos_arm.zip
+          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.1.0rc7/bridge-cli-bundle-4.1.0rc7-macos_arm.zip
           #Scanning Reqiured Fileds ** CNC/Thin client
           coverity_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
