@@ -14,7 +14,7 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
           ### SCANNING: Required fields
-          #bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.0.0rc5/bridge-cli-bundle-4.0.0rc5-macos_arm.zip"
+          bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.1.0rc7/bridge-cli-bundle-4.1.0rc7-macos_arm.zip"
           #bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.12.0rc2/bridge-cli-bundle-3.12.0rc2-macos_arm.zip
           srm_url: ${{ secrets.SRM_URL }}
           srm_apikey: ${{ secrets.SRM_API_KEY }}
