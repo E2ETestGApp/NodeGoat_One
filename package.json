@@ -27,7 +27,10 @@
     "lodash": "4.17.4",
     "marked": "0.3.5",
     "is-my-json-valid": "2.19.0",
-    "mongoose": "6.13.9"
+    "mongoose": "6.13.9",
+     "jsonwebtoken":"8.5.1",
+     "axios": "1.11.0"
+
   },
   "comments": {
     "//": "a9 insecure components"
