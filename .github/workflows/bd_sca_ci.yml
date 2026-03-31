@@ -23,7 +23,7 @@ jobs:
            # NO_PROXY: 'repo.blackduck.com, artifactory.tools.duckutil.net'
            # HTTPS_PROXY: ${{ secrets.PROXY }}
            
-           
+          
         with:
           #blackducksca_externalIssues_create: true
           #blackducksca_externalIssues_severities: "Low"
