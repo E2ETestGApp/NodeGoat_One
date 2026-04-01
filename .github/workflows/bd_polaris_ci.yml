@@ -34,7 +34,7 @@ jobs:
            #polaris_externalIssues_maxCount: 5
            #polaris_branch_name: "master"
         
-           bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.1.0rc9/bridge-cli-bundle-4.1.0rc9-macos_arm.zip
+           bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.1.1rc1/bridge-cli-bundle-4.1.1rc1-macos_arm.zip
            #polaris_server_url: ${{ secrets.POLARIS_PIM_SERVER_URL }}
            #polaris_access_token: ${{ secrets.POLARIS_PIM_ACCESS_TOKEN }}
            #polaris_server_url: ${{ secrets.POLARIS_CDEV_SERVER_URL }}
@@ -62,7 +62,7 @@ jobs:
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
            include_diagnostics: true
-           polaris_fixpr_enabled: true
+           #polaris_fixpr_enabled: true
 
          ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
