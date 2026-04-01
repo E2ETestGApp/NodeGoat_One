@@ -34,14 +34,14 @@ jobs:
           detect_args: '--detect.diagnostic=true'
           #detect_args: '--detect.diagnostic=true'
           #bridgecli_download_url: "https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/3.9.2/bridge-cli-bundle-3.9.2-macos_arm.zip"
-          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.1.0rc9/bridge-cli-bundle-4.1.0rc9-macos_arm.zip  
+          bridgecli_download_url: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.1.1rc9/bridge-cli-bundle-4.1.1rc9-macos_arm.zip  
           #bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.10.1rc3//bridge-cli-bundle-3.10.1rc3-macos_arm.zip"
           blackducksca_url: ${{ vars.BLACKDUCK_URL }}  # Black Duck server URL from environment variables
           blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}  # Black Duck API token from secrets
           #network_ssl_trustAll: true
           #blackducksca_scan_full: false  # Perform a full scan
           #blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'  # Specify severities for scan failures
-          blackducksca_waitForScan: true
+          blackducksca_waitForScan: false
           blackducksca_reports_sarif_create: true
           blackducksca_reports_sarif_severities: 'High'
           #blackducksca_upload_sarif_report: true
