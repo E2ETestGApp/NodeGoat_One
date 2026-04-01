@@ -62,7 +62,7 @@ jobs:
           
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
            include_diagnostics: true
-           polaris_fixpr_enabled: true
+           # polaris_fixpr_enabled: true
 
          ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
