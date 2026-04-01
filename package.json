@@ -24,7 +24,7 @@
     "lodash": "4.17.11",
     "minimist": "0.0.8",
     "jquery": "^2.2.4",
-    "lodash": "4.17.4",
+    "lodash": "4.18.0",
     "marked": "0.3.5",
     "is-my-json-valid": "2.19.0",
     "mongoose": "6.13.9"
