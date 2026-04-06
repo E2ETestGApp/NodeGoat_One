@@ -20,7 +20,9 @@ on:
 # GitHub token permissions for post-scan actions. Required for built-in GITHUB_TOKEN; if using a PAT with equivalent scopes, permissions block can be commented out.
 permissions:
   contents: write               # Required to push changes or create fix branches
-  security-events: write        # Required to upload SARIF results to GitHub Security
+  security-events: write
+  issues: write
+  # Required to upload SARIF results to GitHub Security
 jobs:
   polaris:
     runs-on: ubuntu-latest
