@@ -17,9 +17,14 @@ on:
       - stage
       - release
   workflow_dispatch: {}
+# GitHub token permissions for post-scan actions. Required for built-in GITHUB_TOKEN; if using a PAT with equivalent scopes, permissions block can be commented out.
+permissions:
+  contents: write               # Required to push changes or create fix branches
+  pull-requests: write          # Required to add comments or create fix pull requests
+  security-events: write        # Required to upload SARIF results to GitHub Security
 jobs:
   polaris:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     env:
       ### SCANNING: Required fields
       BRIDGE_POLARIS_SERVERURL: ${{ vars.POLARIS_URL }}
@@ -35,12 +40,17 @@ jobs:
       BRIDGE_GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
       BRIDGE_GITHUB_REPOSITORY_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
       ### SCANNING: Optional fields
-      BRIDGE_POLARIS_TEST_SAST_LOCATION: hybrid
-      BRIDGE_POLARIS_TEST_SCA_LOCATION: hybrid
+      BRIDGE_POLARIS_TEST_SAST_LOCATION: remote
+      BRIDGE_POLARIS_TEST_SCA_LOCATION: remote
+      ### Polaris PR Comments
+      BRIDGE_POLARIS_PRCOMMENT_ENABLED: "true"
+      BRIDGE_POLARIS_EXTERNALISSUES_CREATE: "true"
       ### SARIF report parameters
       BRIDGE_POLARIS_REPORTS_SARIF_CREATE: "true"
       ### GITHUB TOKEN
       BRIDGE_GITHUB_USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ### GitHub pull request information
+      BRIDGE_GITHUB_REPOSITORY_PULL_NUMBER: ${{ github.event.pull_request.number || github.event.number || 0 }}
       ### TOOLING: Bridge CLI download URL
       BRIDGE_DOWNLOAD_URL: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/latest
     steps:
