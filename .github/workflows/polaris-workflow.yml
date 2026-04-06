@@ -23,7 +23,7 @@ permissions:
   pull-requests: write          # Required to add comments or create fix pull requests
 jobs:
   polaris:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       ### SCANNING: Required fields
       BRIDGE_POLARIS_SERVERURL: ${{ vars.POLARIS_URL }}
@@ -39,7 +39,7 @@ jobs:
       BRIDGE_GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
       BRIDGE_GITHUB_REPOSITORY_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
       ### SCANNING: Optional fields
-      BRIDGE_POLARIS_TEST_SAST_LOCATION: local
+      BRIDGE_POLARIS_TEST_SAST_LOCATION: remote
       BRIDGE_POLARIS_TEST_SCA_LOCATION: remote
       ### Polaris PR Comments
       BRIDGE_POLARIS_PRCOMMENT_ENABLED: "true"
@@ -78,3 +78,4 @@ jobs:
 
       - name: Polaris Scan
         run: ${{ env.BRIDGE_CLI_INSTALL_DIR }} --stage polaris --diagnostics
+        shell: powershell
