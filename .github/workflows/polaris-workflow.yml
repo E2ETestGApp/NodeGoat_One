@@ -39,8 +39,8 @@ jobs:
       BRIDGE_GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
       BRIDGE_GITHUB_REPOSITORY_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
       ### SCANNING: Optional fields
-      BRIDGE_POLARIS_TEST_SAST_LOCATION: hybrid
-      BRIDGE_POLARIS_TEST_SCA_LOCATION: hybrid
+      BRIDGE_POLARIS_TEST_SAST_LOCATION: local
+      BRIDGE_POLARIS_TEST_SCA_LOCATION: remote
       ### Polaris PR Comments
       BRIDGE_POLARIS_PRCOMMENT_ENABLED: "true"
       ### SARIF report parameters
@@ -51,6 +51,9 @@ jobs:
       BRIDGE_GITHUB_REPOSITORY_PULL_NUMBER: ${{ github.event.pull_request.number || github.event.number || 0 }}
       ### TOOLING: Bridge CLI download URL
       BRIDGE_DOWNLOAD_URL: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/latest
+
+      ### SCANNING: Optional fields
+      # BRIDGE_POLARIS_WAIT_FOR_SCAN: true # Wait for scan to complete
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
