@@ -1,6 +1,6 @@
-# Quickstart: Bridge CLI with polaris:
-#     https://blackduck-dev.zoominsoftware.io/bundle/bridge/page/documentation/t_github-polaris-cli-quickstart.html
-name: Polaris Bridge CLI Scan
+# Quickstart: Black Duck Security Scan Action with polaris:
+#     https://blackduck-dev.zoominsoftware.io/bundle/bridge/page/documentation/t_github-polaris-quickstart.html
+name: Polaris Security Scan
 on:
   push:
     branches:
@@ -23,59 +23,27 @@ permissions:
   pull-requests: write          # Required to add comments or create fix pull requests
 jobs:
   polaris:
-    runs-on: windows-latest
-    env:
-      ### SCANNING: Required fields
-      BRIDGE_POLARIS_SERVERURL: ${{ vars.POLARIS_URL }}
-      BRIDGE_POLARIS_ACCESSTOKEN: ${{ secrets.POLARIS_ACCESS_TOKEN }}
-      ### ASSESSMENT TYPES
-      BRIDGE_POLARIS_ASSESSMENT_TYPES: SAST,SCA
-      ### SCANNING: Configuration fields
-      BRIDGE_POLARIS_APPLICATION_NAME: ${{ github.event.repository.name }}
-      BRIDGE_POLARIS_PROJECT_NAME: ${{ github.event.repository.name }}
-      BRIDGE_POLARIS_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-      ### GitHub repository information
-      BRIDGE_GITHUB_REPOSITORY_OWNER_NAME: ${{ github.repository_owner }}
-      BRIDGE_GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
-      BRIDGE_GITHUB_REPOSITORY_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-      ### SCANNING: Optional fields
-      BRIDGE_POLARIS_TEST_SAST_LOCATION: remote
-      BRIDGE_POLARIS_TEST_SCA_LOCATION: remote
-      ### Polaris PR Comments
-      BRIDGE_POLARIS_PRCOMMENT_ENABLED: "true"
-      ### SARIF report parameters
-      BRIDGE_POLARIS_REPORTS_SARIF_CREATE: "true"
-      ### GITHUB TOKEN
-      BRIDGE_GITHUB_USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      ### GitHub pull request information
-      BRIDGE_GITHUB_REPOSITORY_PULL_NUMBER: ${{ github.event.pull_request.number || github.event.number || 0 }}
-      ### TOOLING: Bridge CLI download URL
-      BRIDGE_DOWNLOAD_URL: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/latest
-
-      ### SCANNING: Optional fields
-      # BRIDGE_POLARIS_WAIT_FOR_SCAN: true # Wait for scan to complete
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
 
-      - name: Download & Setup Bridge CLI on Windows
-        if: runner.os == 'Windows'
-        shell: powershell
-        run: |-
-          curl.exe -L -o $env:TEMP\bridge.zip "$env:BRIDGE_DOWNLOAD_URL/bridge-cli-bundle-win64.zip"
-          Expand-Archive $env:TEMP\bridge.zip -DestinationPath $env:TEMP\bridge -Force
-          $exe = Get-ChildItem $env:TEMP\bridge -Recurse -Filter bridge-cli.exe | Select-Object -First 1
-          "BRIDGE_CLI_INSTALL_DIR=$($exe.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
-
-      - name: Download & Setup Bridge CLI on macOS/Linux
-        if: runner.os != 'Windows'
-        shell: bash
-        run: |-
-          OS=$([[ "$RUNNER_OS" == "macOS" ]] && ([[ $(uname -m) =~ arm ]] && echo macos_arm || echo macosx) || ([[ $(uname -m) =~ arm ]] && echo linux_arm || echo linux64))
-          curl -sSL -o bridge.zip "$BRIDGE_DOWNLOAD_URL/bridge-cli-bundle-$OS.zip"
-          unzip -qo bridge.zip -d "$RUNNER_TEMP"
-          echo "BRIDGE_CLI_INSTALL_DIR=$(find "$RUNNER_TEMP" -type f -name bridge-cli | head -n1)" >> "$GITHUB_ENV"
-
-      - name: Polaris Scan
-        run: ${{ env.BRIDGE_CLI_INSTALL_DIR }} --stage polaris --diagnostics
-        shell: powershell
+      - name: Polaris Security Scan
+        id: polaris-scan
+        uses: blackduck-inc/black-duck-security-scan@v2
+        with:
+          ### SCANNING: Required fields
+          polaris_server_url: ${{ vars.POLARIS_URL }}
+          polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+          ### ASSESSMENT TYPES
+          polaris_assessment_types: SAST,SCA  # Comma-separated list: SAST,SCA,DAST
+          ### SCANNING: Optional fields
+          polaris_test_sast_location: remote
+          polaris_test_sca_location: remote
+          ### Configuration if Bridge diagnostic files needs to be uploaded
+          include_diagnostics: true
+          ### GITHUB TOKEN
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
+          polaris_prComment_enabled: true
+          ### SARIF report parameters
+          polaris_reports_sarif_create: true  # Create SARIF report and upload it as artifact
