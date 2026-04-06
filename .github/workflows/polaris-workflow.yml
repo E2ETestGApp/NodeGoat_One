@@ -38,7 +38,7 @@ jobs:
           ### ASSESSMENT TYPES
           polaris_assessment_types: SAST,SCA  # Comma-separated list: SAST,SCA,DAST
           ### SCANNING: Optional fields
-          polaris_test_sast_location: remote
+          polaris_test_sast_location: local
           polaris_test_sca_location: remote
           ### Configuration if Bridge diagnostic files needs to be uploaded
           include_diagnostics: true
