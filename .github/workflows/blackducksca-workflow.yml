@@ -36,8 +36,6 @@ jobs:
           ### SCANNING: Required fields
           blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
           blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
-          ### Configuration if Bridge diagnostic files needs to be uploaded
-          include_diagnostics: true
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           blackducksca_prComment_enabled: true
@@ -53,3 +51,6 @@ jobs:
 
           ### Mark build status if policy violating issues are found
           # mark_build_status: failure # Set to success, failure, or skip
+
+          ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
+          # include_diagnostics: false
