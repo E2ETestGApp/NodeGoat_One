@@ -24,7 +24,8 @@ jobs:
       BRIDGE_POLARIS_PROJECT_NAME: ${{ github.event.repository.name }}
       BRIDGE_POLARIS_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
       ### TOOLING: Bridge CLI download URL
-      BRIDGE_DOWNLOAD_URL: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/latest
+      #BRIDGE_DOWNLOAD_URL: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/latest
+      BRIDGE_DOWNLOAD_URL: https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/4.2.1rc2
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
