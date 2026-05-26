@@ -51,10 +51,3 @@ jobs:
           polaris_externalIssues_create: true
           ### SARIF report parameters
           polaris_reports_sarif_create: true  # Create SARIF report and upload it as artifact
-
-
-          ### SCAN CONFIGURATION: Uncomment below to enable
-          # polaris_waitForScan: true # Wait for scan completion before proceeding
-
-          ### Mark build status if policy violating issues are found
-          # mark_build_status: failure # Set to success, failure, or skip
