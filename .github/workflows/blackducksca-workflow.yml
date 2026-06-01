@@ -1,6 +1,6 @@
-# Quickstart: Black Duck Security Scan Action with blackducksca:
-#     https://blackduck-dev.zoominsoftware.io/bundle/bridge/page/documentation/t_github-blackduck-quickstart.html
-name: Black Duck Security Scan
+# Quickstart: Bridge CLI with blackducksca:
+#     https://documentation.blackduck.com/bundle/bridge/page/documentation/c_using-bridge-with-black-duck.html
+name: Black Duck Bridge CLI Scan
 on:
   push:
     branches:
@@ -21,26 +21,50 @@ on:
 permissions:
   contents: write               # Required to push changes or create fix branches
   pull-requests: write          # Required to add comments or create fix pull requests
-  issues: write                 # Required to create github issues
 jobs:
   blackducksca:
     runs-on: self-hosted
+    env:
+      ### SCANNING: Required fields
+      BRIDGE_BLACKDUCKSCA_URL: ${{ vars.BLACKDUCKSCA_URL }}
+      BRIDGE_BLACKDUCKSCA_TOKEN: ${{ secrets.BLACKDUCKSCA_TOKEN }}
+      ### GitHub repository information
+      BRIDGE_GITHUB_REPOSITORY_OWNER_NAME: ${{ github.repository_owner }}
+      BRIDGE_GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
+      BRIDGE_GITHUB_REPOSITORY_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      ### PULL REQUEST COMMENTS
+      BRIDGE_BLACKDUCKSCA_AUTOMATION_PRCOMMENT: "true"
+      ### FIX PULL REQUEST CREATION
+      BRIDGE_BLACKDUCKSCA_FIXPR_ENABLED: "true"
+      ### SARIF report parameters
+      BRIDGE_BLACKDUCKSCA_REPORTS_SARIF_CREATE: "true"
+      ### GITHUB TOKEN
+      BRIDGE_GITHUB_USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ### GitHub pull request information
+      BRIDGE_GITHUB_REPOSITORY_PULL_NUMBER: ${{ github.event.pull_request.number || github.event.number || 0 }}
+      ### TOOLING: Bridge CLI download URL
+      BRIDGE_DOWNLOAD_URL: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/latest
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
 
-      - name: Black Duck Security Scan
-        id: black-duck-security-scan
-        uses: blackduck-inc/black-duck-security-scan@v2
-        with:
-          ### SCANNING: Required fields
-          blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
-          blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
-          ### GITHUB TOKEN
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
-          blackducksca_prComment_enabled: true
-          ### FIX PULL REQUEST CREATION
-          blackducksca_fixpr_enabled: true
-          blackducksca_externalIssues_create: true
-          ### SARIF report parameters
-          blackducksca_reports_sarif_create: true  # Create SARIF report and upload it as artifact
+      - name: Download & Setup Bridge CLI on Windows
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: |-
+          curl.exe -L -o $env:TEMP\bridge.zip "$env:BRIDGE_DOWNLOAD_URL/bridge-cli-bundle-win64.zip"
+          Expand-Archive $env:TEMP\bridge.zip -DestinationPath $env:TEMP\bridge -Force
+          $exe = Get-ChildItem $env:TEMP\bridge -Recurse -Filter bridge-cli.exe | Select-Object -First 1
+          "BRIDGE_CLI_INSTALL_DIR=$($exe.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Download & Setup Bridge CLI on macOS/Linux
+        if: runner.os != 'Windows'
+        shell: bash
+        run: |-
+          OS=$([[ "$RUNNER_OS" == "macOS" ]] && ([[ $(uname -m) =~ arm ]] && echo macos_arm || echo macosx) || ([[ $(uname -m) =~ arm ]] && echo linux_arm || echo linux64))
+          curl -sSL -o bridge.zip "$BRIDGE_DOWNLOAD_URL/bridge-cli-bundle-$OS.zip"
+          unzip -qo bridge.zip -d "$RUNNER_TEMP"
+          echo "BRIDGE_CLI_INSTALL_DIR=$(find "$RUNNER_TEMP" -type f -name bridge-cli | head -n1)" >> "$GITHUB_ENV"
+
+      - name: Black Duck SCA Scan
+        run: ${{ env.BRIDGE_CLI_INSTALL_DIR }} --stage blackducksca --diagnostics
