@@ -40,11 +40,8 @@ jobs:
           ### SCANNING: Optional fields
           polaris_test_sast_location: hybrid
           polaris_test_sca_location: hybrid
-          ### Mark build status if policy violating issues are found
-          mark_build_status: success  # Set to success, failure, or skip
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
-          polaris_prComment_enabled: true
           ### FIX PULL REQUEST CREATION
           polaris_fixpr_enabled: true
           ### SARIF report parameters
