@@ -1,5 +1,5 @@
 # Quickstart: Black Duck Security Scan Action with polaris:
-#     https://blackduck-dev.zoominsoftware.io/bundle/bridge/page/documentation/t_github-polaris-quickstart.html
+#     https://docs.blackduck.com/bundle/bridge/page/documentation/t_github-polaris-quickstart.html
 name: Polaris Security Scan
 on:
   push:
@@ -36,9 +36,10 @@ jobs:
           polaris_server_url: ${{ vars.POLARIS_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           ### ASSESSMENT TYPES
-          polaris_assessment_types: SAST  # Comma-separated list: SAST,SCA,DAST
+          polaris_assessment_types: SAST,SCA  # Comma-separated list: SAST,SCA,DAST
           ### SCANNING: Optional fields
           polaris_test_sast_location: hybrid
+          polaris_test_sca_location: hybrid
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           polaris_prComment_enabled: true
