@@ -1,5 +1,5 @@
 # Quickstart: Black Duck Security Scan Action with polaris:
-#     https://docs.blackduck.com/bundle/bridge/page/documentation/t_github-polaris-quickstart.html
+#     https://black-duck-staging.fluidtopics.net/r/bridge/latest/bridge-cli-guide/quickstart-black-duck-security-scan-action-with-polaris.html
 name: Polaris Security Scan
 on:
   push:
@@ -23,7 +23,7 @@ permissions:
   pull-requests: write          # Required to add comments or create fix pull requests
 jobs:
   polaris:
-    runs-on: self-hosted
+    runs-on: ubundu-latest
     steps:
       - name: Checkout Source
         uses: actions/checkout@v5
@@ -36,12 +36,9 @@ jobs:
           polaris_server_url: ${{ vars.POLARIS_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           ### ASSESSMENT TYPES
-          polaris_assessment_types: SAST,SCA  # Comma-separated list: SAST,SCA,DAST
+          polaris_assessment_types: SAST  # Comma-separated list: SAST,SCA,DAST
           ### SCANNING: Optional fields
           polaris_test_sast_location: hybrid
-          polaris_test_sca_location: hybrid
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           polaris_prComment_enabled: true
-          ### SARIF report parameters
-          polaris_reports_sarif_create: true  # Create SARIF report and upload it as artifact
