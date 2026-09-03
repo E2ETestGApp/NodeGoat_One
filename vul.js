@@ -7,6 +7,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const he = require('he');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -52,7 +53,8 @@ app.get('/read', (req, res) => {
 // ❌ Reflected XSS (unsanitized output)
 app.get('/hello', (req, res) => {
   const name = req.query.name || 'world';
-  res.send(`<h1>Hello ${name}</h1>`); // Vulnerable to XSS e.g., ?name=<img src=x onerror=alert(1)>
+  res.set('X-Content-Type-Options', 'nosniff');
+  res.send(`<h1>Hello ${he.encode(name)}</h1>`);
 });
 
 // ❌ Open Redirect (unvalidated redirect target)
