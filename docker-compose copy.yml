@@ -13,5 +13,7 @@ services:
   mongo:
     image: mongo:4.4
     user: mongodb
+    cap_drop:
+      - NET_RAW
     expose:
       - 27017
