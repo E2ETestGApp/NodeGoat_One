@@ -24,7 +24,7 @@ permissions:
   issues: write                 # Required to create github issues
 jobs:
   polaris:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout Source
         uses: actions/checkout@v5
@@ -41,9 +41,11 @@ jobs:
           ### SCANNING: Optional fields
           polaris_test_sast_location: hybrid
           polaris_test_sca_location: hybrid
+          ### Configuration if Bridge diagnostic files needs to be uploaded
+          include_diagnostics: true
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           polaris_prComment_enabled: true
-          ### FIX PULL REQUEST CREATION
-          polaris_fixpr_enabled: true
           polaris_externalIssues_create: true
+          ### SARIF report parameters
+          polaris_reports_sarif_create: true  # Create SARIF report and upload it as artifact
