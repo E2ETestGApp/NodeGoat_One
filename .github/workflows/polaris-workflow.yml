@@ -39,11 +39,13 @@ jobs:
       BRIDGE_GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
       BRIDGE_GITHUB_REPOSITORY_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
       ### SCANNING: Optional fields
-      BRIDGE_POLARIS_TEST_SAST_LOCATION: hybrid
+      BRIDGE_POLARIS_TEST_SAST_LOCATION: remote
       ### Polaris PR Comments
       BRIDGE_POLARIS_PRCOMMENT_ENABLED: "true"
       ### FIX PULL REQUEST CREATION
       BRIDGE_POLARIS_FIXPR_ENABLED: "true"
+      ### SARIF report parameters
+      BRIDGE_POLARIS_REPORTS_SARIF_CREATE: "true"
       ### GITHUB TOKEN
       BRIDGE_GITHUB_USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       ### GitHub pull request information
@@ -76,4 +78,4 @@ jobs:
           echo "BRIDGE_CLI_INSTALL_DIR=$(find "$RUNNER_TEMP" -type f -name bridge-cli | head -n1)" >> "$GITHUB_ENV"
 
       - name: Polaris Scan
-        run: ${{ env.BRIDGE_CLI_INSTALL_DIR }} --stage polaris --diagnostics
+        run: ${{ env.BRIDGE_CLI_INSTALL_DIR }} --stage polaris
