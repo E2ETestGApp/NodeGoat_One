@@ -23,7 +23,7 @@ permissions:
   pull-requests: write          # Required to add comments or create fix pull requests
 jobs:
   polaris:
-    runs-on: ubundu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout Source
         uses: actions/checkout@v5
@@ -36,9 +36,23 @@ jobs:
           polaris_server_url: ${{ vars.POLARIS_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           ### ASSESSMENT TYPES
-          polaris_assessment_types: SAST  # Comma-separated list: SAST,SCA,DAST
+          polaris_assessment_types: SAST,SCA  # Comma-separated list: SAST,SCA,DAST
           ### SCANNING: Optional fields
           polaris_test_sast_location: hybrid
+          polaris_test_sca_location: hybrid
+          ### Configuration if Bridge diagnostic files needs to be uploaded
+          include_diagnostics: true
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
-          polaris_prComment_enabled: true
+          ### FIX PULL REQUEST CREATION
+          polaris_fixpr_enabled: true
+
+
+          ### SCAN CONFIGURATION: Uncomment below to enable
+          # polaris_waitForScan: true # Wait for scan completion before proceeding
+
+          ### Mark build status if policy violating issues are found
+          # mark_build_status: failure # Set to success, failure, or skip
+
+          ### SCANNING: Optional fields
+          # polaris_prComment_enabled: false
