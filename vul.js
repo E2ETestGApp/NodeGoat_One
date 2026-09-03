@@ -31,8 +31,20 @@ app.get('/user', (req, res) => {
 
 // ❌ Command Injection via child_process.exec
 app.get('/exec', (req, res) => {
-  const cmd = req.query.cmd || 'echo hello';
-  exec(cmd, (err, stdout, stderr) => {
+  const cmd = typeof req.query.cmd === 'string' && req.query.cmd.trim() !== '' ? req.query.cmd.trim() : 'echo hello';
+  const allowedCommands = {
+    'echo hello': { file: 'echo', args: ['hello'] },
+    'echo goodbye': { file: 'echo', args: ['goodbye'] },
+    date: { file: 'date', args: [] }
+  };
+  const selected = allowedCommands[cmd];
+
+  if (!selected) {
+    return res.status(400).send('Invalid command');
+  }
+
+  const { execFile } = require('child_process');
+  execFile(selected.file, selected.args, (err, stdout, stderr) => {
     if (err) return res.status(500).send(String(err));
     res.send({ stdout, stderr });
   });
