@@ -75,9 +75,17 @@ app.get('/eval', (req, res) => {
 
 // ❌ Insecure sandboxing (VM with untrusted input)
 app.post('/vm', (req, res) => {
-  const code = req.body && req.body.code ? req.body.code : 'process.exit()';
+  const action = req.body && req.body.code ? req.body.code : 'noop';
+  const scripts = {
+    noop: 'undefined',
+    uptime: 'process.uptime()'
+  };
+  const script = scripts[action];
+  if (!script) {
+    return res.status(400).send('bad code');
+  }
   try {
-    const r = vm.runInThisContext(code); // Vulnerable
+    const r = vm.runInThisContext(script);
     res.send({ r });
   } catch (e) {
     res.status(400).send('bad code');
