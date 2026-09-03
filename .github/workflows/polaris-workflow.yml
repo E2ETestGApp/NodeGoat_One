@@ -23,7 +23,7 @@ permissions:
   pull-requests: write          # Required to add comments or create fix pull requests
 jobs:
   polaris:
-    runs-on: self-hosted
+    runs-on: sef-hosted
     steps:
       - name: Checkout Source
         uses: actions/checkout@v5
@@ -38,13 +38,14 @@ jobs:
           ### ASSESSMENT TYPES
           polaris_assessment_types: SAST  # Comma-separated list: SAST,SCA,DAST
           ### SCANNING: Optional fields
-          polaris_test_sast_location: hybrid
-          ### Configuration if Bridge diagnostic files needs to be uploaded
-          include_diagnostics: true
+          polaris_test_sast_location: local
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
+          polaris_prComment_enabled: true
           ### FIX PULL REQUEST CREATION
           polaris_fixpr_enabled: true
+          ### SARIF report parameters
+          polaris_reports_sarif_create: true  # Create SARIF report and upload it as artifact
 
 
           ### SCAN CONFIGURATION: Uncomment below to enable
@@ -53,5 +54,5 @@ jobs:
           ### Mark build status if policy violating issues are found
           # mark_build_status: failure # Set to success, failure, or skip
 
-          ### SCANNING: Optional fields
-          # polaris_prComment_enabled: false
+          ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
+          # include_diagnostics: false
