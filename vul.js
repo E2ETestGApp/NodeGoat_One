@@ -52,7 +52,14 @@ app.get('/read', (req, res) => {
 // ❌ Reflected XSS (unsanitized output)
 app.get('/hello', (req, res) => {
   const name = req.query.name || 'world';
-  res.send(`<h1>Hello ${name}</h1>`); // Vulnerable to XSS e.g., ?name=<img src=x onerror=alert(1)>
+  const safeName = String(name).replace(/[&<>"']/g, (ch) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[ch]));
+  res.send(`<h1>Hello ${safeName}</h1>`); // Vulnerable to XSS e.g., ?name=<img src=x onerror=alert(1)>
 });
 
 // ❌ Open Redirect (unvalidated redirect target)
