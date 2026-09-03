@@ -31,8 +31,7 @@ app.get('/user', (req, res) => {
 
 // ❌ Command Injection via child_process.exec
 app.get('/exec', (req, res) => {
-  const cmd = req.query.cmd || 'echo hello';
-  exec(cmd, (err, stdout, stderr) => {
+  exec('echo hello', (err, stdout, stderr) => {
     if (err) return res.status(500).send(String(err));
     res.send({ stdout, stderr });
   });
