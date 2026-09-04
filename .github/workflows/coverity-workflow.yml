@@ -1,5 +1,5 @@
 # Quickstart: Black Duck Security Scan Action with coverity:
-#     https://blackduck-dev.zoominsoftware.io/bundle/bridge/page/documentation/t_github-coverity-quickstart.html
+#     https://black-duck-staging.fluidtopics.net/r/bridge/latest/bridge-cli-guide/quickstart-black-duck-security-scan-action-with-coverity.html
 name: Coverity Scan
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout Source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Coverity Scan
         id: coverity-scan
@@ -36,8 +36,6 @@ jobs:
           coverity_url: ${{ vars.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
-          ### Configuration if Bridge diagnostic files needs to be uploaded
-          include_diagnostics: true
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           coverity_prComment_enabled: true
@@ -51,3 +49,6 @@ jobs:
 
           ### Mark build status if policy violating issues are found
           # mark_build_status: failure # Set to success, failure, or skip
+
+          ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
+          # include_diagnostics: false
