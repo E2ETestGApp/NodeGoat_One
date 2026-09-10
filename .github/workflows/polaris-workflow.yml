@@ -20,7 +20,7 @@ on:
 # GitHub token permissions for post-scan actions. Required for built-in GITHUB_TOKEN; if using a PAT with equivalent scopes, permissions block can be commented out.
 permissions:
   contents: write               # Required to push changes or create fix branches
-  security-events: write        # Required to upload SARIF results to GitHub Security
+  pull-requests: write          # Required to add comments or create fix pull requests
 jobs:
   polaris:
     runs-on: self-hosted
@@ -40,10 +40,8 @@ jobs:
           ### SCANNING: Optional fields
           polaris_test_sast_location: hybrid
           polaris_test_sca_location: hybrid
-          ### Configuration if Bridge diagnostic files needs to be uploaded
-          include_diagnostics: true
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
+          polaris_prComment_enabled: true
           ### SARIF report parameters
-          polaris_upload_sarif_report: true  # Upload SARIF report in GitHub Advanced Security tab
           polaris_reports_sarif_create: true  # Create SARIF report and upload it as artifact
