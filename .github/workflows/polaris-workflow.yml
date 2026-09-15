@@ -36,13 +36,10 @@ jobs:
           polaris_server_url: ${{ vars.POLARIS_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           ### ASSESSMENT TYPES
-          polaris_assessment_types: SAST,SCA  # Comma-separated list: SAST,SCA,DAST
+          polaris_assessment_types: SAST  # Comma-separated list: SAST,SCA,DAST
           ### SCANNING: Optional fields
           polaris_test_sast_location: hybrid
-          polaris_test_sca_location: hybrid
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           ### FIX PULL REQUEST CREATION
           polaris_fixpr_enabled: true
-          ### SARIF report parameters
-          polaris_reports_sarif_create: true  # Create SARIF report and upload it as artifact
