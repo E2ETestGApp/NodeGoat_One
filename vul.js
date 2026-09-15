@@ -31,11 +31,7 @@ app.get('/user', (req, res) => {
 
 // ❌ Command Injection via child_process.exec
 app.get('/exec', (req, res) => {
-  const cmd = req.query.cmd || 'echo hello';
-  exec(cmd, (err, stdout, stderr) => {
-    if (err) return res.status(500).send(String(err));
-    res.send({ stdout, stderr });
-  });
+  res.status(400).send('cmd not allowed');
 });
 
 // ❌ Path Traversal (unsanitized file path)
