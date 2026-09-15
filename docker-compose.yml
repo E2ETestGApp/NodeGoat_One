@@ -3,6 +3,8 @@ version: "3.7"
 services:
   web:
     build: .
+    cap_drop:
+      - NET_RAW
     environment:
       NODE_ENV:
       MONGODB_URI: mongodb://mongo:27017/nodegoat
