@@ -47,8 +47,6 @@ jobs:
       ### FIX PULL REQUEST CREATION
       BRIDGE_POLARIS_FIXPR_ENABLED: "true"
       BRIDGE_POLARIS_EXTERNALISSUES_CREATE: "true"
-      ### SARIF report parameters
-      BRIDGE_POLARIS_REPORTS_SARIF_CREATE: "true"
       ### GITHUB TOKEN
       BRIDGE_GITHUB_USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       ### GitHub pull request information
@@ -78,4 +76,4 @@ jobs:
           echo "BRIDGE_CLI_INSTALL_DIR=$(find "$RUNNER_TEMP" -type f -name bridge-cli | head -n1)" >> "$GITHUB_ENV"
 
       - name: Polaris Scan
-        run: ${{ env.BRIDGE_CLI_INSTALL_DIR }} --stage polaris --diagnostics
+        run: ${{ env.BRIDGE_CLI_INSTALL_DIR }} --stage polaris
